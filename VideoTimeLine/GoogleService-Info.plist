@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>250250929619-6tnunrepnvm4vtfcp34ma9t7suorj6mn.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.250250929619-6tnunrepnvm4vtfcp34ma9t7suorj6mn</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAhktexowxAO7B5fWHVg1Nn0EzTR5hp2QE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>250250929619</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.icannot.t.n.VideoTimeLine</string>
+	<key>PROJECT_ID</key>
+	<string>videotimeline-32f29</string>
+	<key>STORAGE_BUCKET</key>
+	<string>videotimeline-32f29.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:250250929619:ios:80b7461dbf369651</string>
+	<key>DATABASE_URL</key>
+	<string>https://videotimeline-32f29.firebaseio.com</string>
+</dict>
+</plist>

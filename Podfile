@@ -17,4 +17,9 @@ target 'VideoTimeLine' do
     # Pods for testing
   end
 
+    pod 'Firebase'
+    pod 'Firebase/Analytics'
+    pod 'Firebase/Auth'
+    pod 'Firebase/Firestore'
+
 end
