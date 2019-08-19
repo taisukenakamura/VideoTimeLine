@@ -40,6 +40,9 @@
                                                 <integer key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="tappedSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K8I-9R-rtS"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyz-YT-nzv">
                                         <rect key="frame" x="0.0" y="55" width="220" height="50"/>
@@ -56,6 +59,9 @@
                                                 <integer key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="tappedLogIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="exF-Ax-LFU"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -76,28 +82,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <segue destination="iDm-rs-aaj" kind="show" identifier="startApp" id="0aW-fo-wXf"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="101" y="-54"/>
-        </scene>
-        <!--First Screen View Controller-->
-        <scene sceneID="XeB-xn-5Df">
-            <objects>
-                <viewController id="iDm-rs-aaj" customClass="FirstScreenViewController" customModule="VideoTimeLine" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="YwQ-kX-TKD">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="IbZ-Al-XTf"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="86q-fL-fX3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="868" y="-55"/>
+            <point key="canvasLocation" x="178" y="-55"/>
         </scene>
     </scenes>
 </document>

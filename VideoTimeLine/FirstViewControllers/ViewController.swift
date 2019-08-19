@@ -37,5 +37,23 @@ class ViewController: UIViewController {
 
     }
     
+    @IBAction func tappedSignUp(_ sender: UIButton) {
+        
+        let storyboard: UIStoryboard = UIStoryboard(name: "Signup", bundle: nil)
+        let svc: SignUpViewController = storyboard.instantiateViewController(withIdentifier: "Signup") as! SignUpViewController
+         self.present(svc, animated: true)
+        
+    }
+    
+    @IBAction func tappedLogIn(_ sender: UIButton) {
+        
+        let storyboard: UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
+        let lvc: LoginViewController = storyboard.instantiateViewController(withIdentifier: "Login") as! LoginViewController
+        self.present(lvc, animated: true)
+    }
+    
+    
+    
 }
+
 
