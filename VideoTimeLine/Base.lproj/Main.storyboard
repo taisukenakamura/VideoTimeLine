@@ -82,6 +82,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="cyz-YT-nzv" id="Td4-Tg-VFv"/>
+                        <outlet property="signupButton" destination="e05-jr-Gvp" id="aEl-ea-K8x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,14 +9,17 @@
 import UIKit
 import AVFoundation
 
+
 class ViewController: UIViewController {
 
+    @IBOutlet weak var signupButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Bundle Resourcesからsample.mp4を読み込んで再生
-        let path = Bundle.main.path(forResource: "System - 697", ofType: "mp4")!
+        let path = Bundle.main.path(forResource: "Owl - 18244", ofType: "mp4")!
         let player = AVPlayer(url: URL(fileURLWithPath: path))
         player.play()
         
@@ -39,6 +42,7 @@ class ViewController: UIViewController {
     
     @IBAction func tappedSignUp(_ sender: UIButton) {
         
+//        sender.flash()
         let storyboard: UIStoryboard = UIStoryboard(name: "Signup", bundle: nil)
         let svc: SignUpViewController = storyboard.instantiateViewController(withIdentifier: "Signup") as! SignUpViewController
          self.present(svc, animated: true)
@@ -47,9 +51,27 @@ class ViewController: UIViewController {
     
     @IBAction func tappedLogIn(_ sender: UIButton) {
         
+//         signupButton.flash()
         let storyboard: UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
         let lvc: LoginViewController = storyboard.instantiateViewController(withIdentifier: "Login") as! LoginViewController
-        self.present(lvc, animated: true)
+        
+//        flash()
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+            // your code here
+            self.present(lvc, animated: true)
+//        }
+    }
+    
+    func flash () {
+        
+        UIView.animate(withDuration: 0.1
+            , delay: 0
+            , options: [.repeat,.autoreverse]
+            , animations: {
+                self.loginButton.alpha = 0
+        })
+        
+        
     }
     
     

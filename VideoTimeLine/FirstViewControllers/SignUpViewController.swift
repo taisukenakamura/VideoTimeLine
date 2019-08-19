@@ -12,8 +12,8 @@ import TextFieldEffects
 
 class SignUpViewController: UIViewController {
 
-    @IBOutlet weak var emailTextField: HoshiTextField!
-    @IBOutlet weak var passwordTextField: HoshiTextField!
+    @IBOutlet weak var emailTextField: YokoTextField!
+    @IBOutlet weak var passwordTextField: YokoTextField!
     
     
     override func viewDidLoad() {
@@ -26,14 +26,11 @@ class SignUpViewController: UIViewController {
     
     func textFieldColor() {
         
-        emailTextField.placeholderColor = .darkGray
-        emailTextField.borderActiveColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
-        emailTextField.borderInactiveColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
+        emailTextField.placeholderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        emailTextField.foregroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         
-        passwordTextField.placeholderColor = .darkGray
-        passwordTextField.borderActiveColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
-        passwordTextField.borderInactiveColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
-        
+        passwordTextField.placeholderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        passwordTextField.foregroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         
     }
     // ユーザー新規作成
@@ -47,14 +44,27 @@ class SignUpViewController: UIViewController {
                 // 成功時の処理
             } else {
                 
+                sender.flash()
+                self.toTimeLine()
             }
         })
+    }
+    
+    
+    // タイムラインへ遷移
+    func toTimeLine() {
+        // storyboardのfileの特定
+        let storyboard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
+        // 移動先のvcをインスタンス化
+        let vc = storyboard.instantiateViewController(withIdentifier: "Home")
+        // 遷移処理
+        self.present(vc, animated: true)
     }
     
     // エラーが帰ってきた場合のアラート
     func showErrorAlert(error: Error?) {
         
-        let alert = UIAlertController(title: "エラー", message: error?.localizedDescription, preferredStyle: .alert)
+        let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .cancel)
         alert.addAction(okAction)
         // 表示

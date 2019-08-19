@@ -15,12 +15,15 @@
 		785D024D230A4796003545B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 785D024B230A4796003545B9 /* LaunchScreen.storyboard */; };
 		785D0258230A4796003545B9 /* VideoTimeLineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785D0257230A4796003545B9 /* VideoTimeLineTests.swift */; };
 		785D0263230A4796003545B9 /* VideoTimeLineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785D0262230A4796003545B9 /* VideoTimeLineUITests.swift */; };
-		785D0271230A4FE4003545B9 /* System - 697.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 785D0270230A4FE3003545B9 /* System - 697.mp4 */; };
 		785D0273230A5C6A003545B9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 785D0272230A5C69003545B9 /* GoogleService-Info.plist */; };
 		785D0275230A64D5003545B9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785D0274230A64D5003545B9 /* LoginViewController.swift */; };
 		785D027A230A7F0E003545B9 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 785D0279230A7F0E003545B9 /* Login.storyboard */; };
 		785D027C230A7F3F003545B9 /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 785D027B230A7F3F003545B9 /* Signup.storyboard */; };
 		785D027E230A93AD003545B9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785D027D230A93AD003545B9 /* SignUpViewController.swift */; };
+		789B07A7230AA5C600D938DA /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 789B07A6230AA5C600D938DA /* Home.storyboard */; };
+		789B07AB230AA79600D938DA /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789B07AA230AA79600D938DA /* HomeTableViewController.swift */; };
+		789B07AF230AAD2C00D938DA /* Buton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789B07AE230AAD2B00D938DA /* Buton.swift */; };
+		789B07B1230AC8FC00D938DA /* Owl - 18244.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 789B07B0230AC8FB00D938DA /* Owl - 18244.mp4 */; };
 		F78605BA58366E04382F6B11 /* Pods_VideoTimeLineTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F622D0E6F2B004E0F6FD5B72 /* Pods_VideoTimeLineTests.framework */; };
 		FB049DDC56754962C009736F /* Pods_VideoTimeLineUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63554BA5A5F37EAD3540219 /* Pods_VideoTimeLineUITests.framework */; };
 /* End PBXBuildFile section */
@@ -60,12 +63,15 @@
 		785D025E230A4796003545B9 /* VideoTimeLineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoTimeLineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		785D0262230A4796003545B9 /* VideoTimeLineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTimeLineUITests.swift; sourceTree = "<group>"; };
 		785D0264230A4796003545B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		785D0270230A4FE3003545B9 /* System - 697.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "System - 697.mp4"; sourceTree = "<group>"; };
 		785D0272230A5C69003545B9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		785D0274230A64D5003545B9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		785D0279230A7F0E003545B9 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		785D027B230A7F3F003545B9 /* Signup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
 		785D027D230A93AD003545B9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		789B07A6230AA5C600D938DA /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		789B07AA230AA79600D938DA /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		789B07AE230AAD2B00D938DA /* Buton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buton.swift; sourceTree = "<group>"; };
+		789B07B0230AC8FB00D938DA /* Owl - 18244.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Owl - 18244.mp4"; sourceTree = "<group>"; };
 		AB887D7E85B4DBB54799D806 /* Pods_VideoTimeLine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoTimeLine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B37CBBA58617798FDF3A6621 /* Pods-VideoTimeLine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoTimeLine.release.xcconfig"; path = "Target Support Files/Pods-VideoTimeLine/Pods-VideoTimeLine.release.xcconfig"; sourceTree = "<group>"; };
 		B63554BA5A5F37EAD3540219 /* Pods_VideoTimeLineUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoTimeLineUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,12 +142,15 @@
 		785D0241230A4794003545B9 /* VideoTimeLine */ = {
 			isa = PBXGroup;
 			children = (
-				785D0270230A4FE3003545B9 /* System - 697.mp4 */,
+				789B07B0230AC8FB00D938DA /* Owl - 18244.mp4 */,
 				785D0242230A4794003545B9 /* AppDelegate.swift */,
+				789B07AE230AAD2B00D938DA /* Buton.swift */,
 				785D0276230A64EB003545B9 /* FirstViewControllers */,
+				789B07AA230AA79600D938DA /* HomeTableViewController.swift */,
 				785D0246230A4794003545B9 /* Main.storyboard */,
 				785D0279230A7F0E003545B9 /* Login.storyboard */,
 				785D027B230A7F3F003545B9 /* Signup.storyboard */,
+				789B07A6230AA5C600D938DA /* Home.storyboard */,
 				785D0249230A4796003545B9 /* Assets.xcassets */,
 				785D024B230A4796003545B9 /* LaunchScreen.storyboard */,
 				785D024E230A4796003545B9 /* Info.plist */,
@@ -299,13 +308,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				789B07B1230AC8FC00D938DA /* Owl - 18244.mp4 in Resources */,
 				785D024D230A4796003545B9 /* LaunchScreen.storyboard in Resources */,
 				785D024A230A4796003545B9 /* Assets.xcassets in Resources */,
 				785D027A230A7F0E003545B9 /* Login.storyboard in Resources */,
 				785D027C230A7F3F003545B9 /* Signup.storyboard in Resources */,
 				785D0248230A4794003545B9 /* Main.storyboard in Resources */,
-				785D0271230A4FE4003545B9 /* System - 697.mp4 in Resources */,
 				785D0273230A5C6A003545B9 /* GoogleService-Info.plist in Resources */,
+				789B07A7230AA5C600D938DA /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,8 +428,10 @@
 			files = (
 				785D0245230A4794003545B9 /* ViewController.swift in Sources */,
 				785D0275230A64D5003545B9 /* LoginViewController.swift in Sources */,
+				789B07AF230AAD2C00D938DA /* Buton.swift in Sources */,
 				785D027E230A93AD003545B9 /* SignUpViewController.swift in Sources */,
 				785D0243230A4794003545B9 /* AppDelegate.swift in Sources */,
+				789B07AB230AA79600D938DA /* HomeTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
