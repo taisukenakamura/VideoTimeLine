@@ -19,20 +19,8 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-       textFieldColor()
-        
-        
     }
     
-    func textFieldColor() {
-        
-        emailTextField.placeholderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        emailTextField.foregroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-        
-        passwordTextField.placeholderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        passwordTextField.foregroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-        
-    }
     // ユーザー新規作成
     @IBAction func createUser(_ sender: UIButton) {
         guard let email = emailTextField.text, let password = passwordTextField.text else {return}
@@ -56,9 +44,9 @@ class SignUpViewController: UIViewController {
         // storyboardのfileの特定
         let storyboard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
         // 移動先のvcをインスタンス化
-        let vc = storyboard.instantiateViewController(withIdentifier: "Home")
+        let htbc = storyboard.instantiateViewController(withIdentifier: "Home") as! HomeTabBarController
         // 遷移処理
-        self.present(vc, animated: true)
+        self.present(htbc, animated: true)
     }
     
     // エラーが帰ってきた場合のアラート
