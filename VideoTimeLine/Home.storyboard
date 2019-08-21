@@ -56,16 +56,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bWe-mI-fAr">
-                                <rect key="frame" x="185" y="390" width="200" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="100"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LVH-vJ-fxK">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -80,6 +70,33 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bWe-mI-fAr">
+                                <rect key="frame" x="185" y="390" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Qb-5g-hpG">
+                                        <rect key="frame" x="84" y="14" width="25" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="鉛筆アイコン　4"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Us-Mg-bIu">
+                                        <rect key="frame" x="15" y="84" width="25" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="カメラのアイコン素材 7"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLQ-yw-Q4Z">
+                                        <rect key="frame" x="28" y="25" width="25" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="ムービーのアイコン素材"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmS-mV-13g" customClass="FloatingActionButton" customModule="VideoTimeLine" customModuleProvider="target">
                                 <rect key="frame" x="260" y="465" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
@@ -97,22 +114,20 @@
                             <constraint firstItem="LVH-vJ-fxK" firstAttribute="leading" secondItem="dFj-JA-aw2" secondAttribute="leading" id="gKE-6p-EBv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dFj-JA-aw2"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="LVH-vJ-fxK"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="タイムライン" id="jfr-VR-Tlt"/>
                     <connections>
                         <outlet property="addButton" destination="bmS-mV-13g" id="wKG-5h-LwI"/>
+                        <outlet property="cameraButton" destination="4Us-Mg-bIu" id="bq7-96-BVb"/>
                         <outlet property="menuBar" destination="bWe-mI-fAr" id="j3i-yN-fad"/>
+                        <outlet property="pencilButton" destination="2Qb-5g-hpG" id="4vh-HR-0aV"/>
                         <outlet property="tableView" destination="LVH-vJ-fxK" id="dSs-WJ-krY"/>
+                        <outlet property="videoButton" destination="pLQ-yw-Q4Z" id="c7k-Kq-Zux"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j50-IM-Ylb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="862.5" y="-32.74647887323944"/>
+            <point key="canvasLocation" x="1044" y="-81"/>
         </scene>
         <!--設定-->
         <scene sceneID="iOh-Lw-BPn">
@@ -245,7 +260,10 @@
     </scenes>
     <resources>
         <image name="インターネットのアイコン" width="32" height="32"/>
+        <image name="カメラのアイコン素材 7" width="32" height="32"/>
         <image name="フクロウのフリー素材3" width="32" height="32"/>
         <image name="フクロウアイコン4" width="32" height="32"/>
+        <image name="ムービーのアイコン素材" width="48" height="48"/>
+        <image name="鉛筆アイコン　4" width="32" height="32"/>
     </resources>
 </document>

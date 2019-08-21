@@ -27,5 +27,6 @@ target 'VideoTimeLine' do
     pod 'SwipeableTabBarController'
     pod 'RHSideButtons'
     pod 'NextLevel'
+    pod 'FirebaseUI' 
     
 end

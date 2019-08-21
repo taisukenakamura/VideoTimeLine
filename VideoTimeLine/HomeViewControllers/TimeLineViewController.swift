@@ -18,6 +18,9 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
     
     
     @IBOutlet weak var menuBar: UIView!
+    @IBOutlet weak var pencilButton: UIButton!
+    @IBOutlet weak var videoButton: UIButton!
+    @IBOutlet weak var cameraButton: UIButton!
     
 
     
@@ -53,18 +56,32 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         
         addButton.createFloatingActionButton()
         
-        menuBar.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+        closeMenu()
     }
     
     @IBAction func menuTapped(_ sender: FloatingActionButton) {
         UIView.animate(withDuration: 0.3, animations: {
             
          if self.menuBar.transform == .identity {
-            self.menuBar.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+            self.closeMenu()
         } else {
             self.menuBar.transform = .identity
         }
     })
+        UIView.animate(withDuration: 0.5, delay: 0.2, usingSpringWithDamping:  0.3,initialSpringVelocity: 0,options: [], animations: {
+            if self.menuBar.transform != .identity {
+            self.pencilButton.transform = .identity
+            self.videoButton.transform = .identity
+            self.cameraButton.transform = .identity
+            }
+        })
+    }
+    
+    func closeMenu() {
+        menuBar.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+        pencilButton.transform = CGAffineTransform(translationX: 0, y: 15)
+        videoButton.transform = CGAffineTransform(translationX: 11, y: 11)
+        cameraButton.transform = CGAffineTransform(translationX: 15, y: 15)
     }
     
     // 更新

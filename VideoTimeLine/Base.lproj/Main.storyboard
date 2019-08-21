@@ -71,8 +71,8 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="QYg-N5-zZ8"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                        <state key="normal" title="Google" image="google.png">
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="10"/>
+                                        <state key="normal" title="Google認証 or 電話番号">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -100,8 +100,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="AuthButton" destination="a4v-OW-tAm" id="Jyd-SV-jJ9"/>
                         <outlet property="loginButton" destination="cyz-YT-nzv" id="Td4-Tg-VFv"/>
-                        <outlet property="signInButton" destination="a4v-OW-tAm" id="Jyd-SV-jJ9"/>
                         <outlet property="signupButton" destination="e05-jr-Gvp" id="aEl-ea-K8x"/>
                     </connections>
                 </viewController>
@@ -110,7 +110,4 @@
             <point key="canvasLocation" x="176.25" y="-55.985915492957744"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="google.png" width="18" height="18"/>
-    </resources>
 </document>
