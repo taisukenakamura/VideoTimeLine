@@ -27,7 +27,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QnQ-5n-bJN">
                                 <rect key="frame" x="50" y="358" width="220" height="160"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e05-jr-Gvp">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e05-jr-Gvp" customClass="SpringButton" customModule="VideoTimeLine" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="220" height="50"/>
                                         <color key="backgroundColor" red="0.70282007440000005" green="0.96655136350000004" blue="0.74743228480000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -39,6 +39,9 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="flash"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="tappedSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K8I-9R-rtS"/>
@@ -68,8 +71,9 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="QYg-N5-zZ8"/>
                                         </constraints>
-                                        <state key="normal" image="google.png">
-                                            <color key="titleColor" red="0.70282007440000005" green="0.96655136350000004" blue="0.74743228480000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                        <state key="normal" title="Google" image="google.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">

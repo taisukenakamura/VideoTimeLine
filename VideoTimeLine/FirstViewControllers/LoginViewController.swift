@@ -42,7 +42,7 @@ class LoginViewController: UIViewController {
                 self.showErrorAlert(error: error)
             } else {
                 // 認証成功
-                sender.flash()
+               
                 print("ログイン成功")
                 self.toTimeLine()
             }

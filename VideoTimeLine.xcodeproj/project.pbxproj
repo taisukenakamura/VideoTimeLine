@@ -23,6 +23,8 @@
 		789B07A7230AA5C600D938DA /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 789B07A6230AA5C600D938DA /* Home.storyboard */; };
 		789B07AF230AAD2C00D938DA /* Buton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789B07AE230AAD2B00D938DA /* Buton.swift */; };
 		789B07B1230AC8FC00D938DA /* Owl - 18244.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 789B07B0230AC8FB00D938DA /* Owl - 18244.mp4 */; };
+		78BBB279230D3E7200BF6A9B /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BBB278230D3E7200BF6A9B /* PostViewController.swift */; };
+		78BBB27D230D4D9A00BF6A9B /* FuloatingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BBB27C230D4D9A00BF6A9B /* FuloatingActionButton.swift */; };
 		78F4FE38230B857000510537 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4FE37230B856F00510537 /* HomeTabBarController.swift */; };
 		78F4FE3A230B8DAE00510537 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4FE39230B8DAE00510537 /* HomeTabBarController.swift */; };
 		78F4FE44230BD36A00510537 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4FE43230BD36A00510537 /* FriendsViewController.swift */; };
@@ -77,6 +79,8 @@
 		789B07A6230AA5C600D938DA /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		789B07AE230AAD2B00D938DA /* Buton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buton.swift; sourceTree = "<group>"; };
 		789B07B0230AC8FB00D938DA /* Owl - 18244.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Owl - 18244.mp4"; sourceTree = "<group>"; };
+		78BBB278230D3E7200BF6A9B /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		78BBB27C230D4D9A00BF6A9B /* FuloatingActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuloatingActionButton.swift; sourceTree = "<group>"; };
 		78F4FE37230B856F00510537 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeTabBarController.swift; path = /Users/nakamurayasusuke/Desktop/VideoTimeLine/VideoTimeLine/HomeViewControllers/HomeTabBarController.swift; sourceTree = "<absolute>"; };
 		78F4FE39230B8DAE00510537 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeTabBarController.swift; path = /Users/nakamurayasusuke/Desktop/VideoTimeLine/VideoTimeLine/HomeViewControllers/HomeTabBarController.swift; sourceTree = "<absolute>"; };
 		78F4FE43230BD36A00510537 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +160,7 @@
 			children = (
 				789B07B0230AC8FB00D938DA /* Owl - 18244.mp4 */,
 				785D0242230A4794003545B9 /* AppDelegate.swift */,
+				78BBB27C230D4D9A00BF6A9B /* FuloatingActionButton.swift */,
 				789B07AE230AAD2B00D938DA /* Buton.swift */,
 				78F4FE37230B856F00510537 /* HomeTabBarController.swift */,
 				785D0276230A64EB003545B9 /* FirstViewControllers */,
@@ -200,15 +205,24 @@
 			path = FirstViewControllers;
 			sourceTree = "<group>";
 		};
+		78BBB273230D06B600BF6A9B /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		78F4FE31230B818300510537 /* HomeViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				78BBB273230D06B600BF6A9B /* New Group */,
 				78F4FE39230B8DAE00510537 /* HomeTabBarController.swift */,
 				78F4FE43230BD36A00510537 /* FriendsViewController.swift */,
 				78F4FE45230BD47300510537 /* TimeLineViewController.swift */,
 				78F4FE49230BDCBA00510537 /* TimeLineTableViewCell.swift */,
 				78F4FE4A230BDCBA00510537 /* TimeLineTableViewCell.xib */,
 				78F4FE47230BD58E00510537 /* SettingViewController.swift */,
+				78BBB278230D3E7200BF6A9B /* PostViewController.swift */,
 			);
 			path = HomeViewControllers;
 			sourceTree = "<group>";
@@ -471,8 +485,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78BBB279230D3E7200BF6A9B /* PostViewController.swift in Sources */,
 				785D0245230A4794003545B9 /* ViewController.swift in Sources */,
 				785D0275230A64D5003545B9 /* LoginViewController.swift in Sources */,
+				78BBB27D230D4D9A00BF6A9B /* FuloatingActionButton.swift in Sources */,
 				78F4FE38230B857000510537 /* HomeTabBarController.swift in Sources */,
 				78F4FE46230BD47300510537 /* TimeLineViewController.swift in Sources */,
 				789B07AF230AAD2C00D938DA /* Buton.swift in Sources */,

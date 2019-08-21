@@ -37,7 +37,7 @@ class SignUpViewController: UIViewController {
                 // 成功時の処理
             } else {
                 
-                sender.flash()
+                
                 self.toTimeLine()
             }
         })

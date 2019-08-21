@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--トーク-->
         <scene sceneID="DHx-pk-YU1">
             <objects>
                 <viewController storyboardIdentifier="Friends" id="Egx-4h-plU" customClass="FriendsViewController" customModule="VideoTimeLine" customModuleProvider="target" sceneMemberID="viewController">
@@ -42,13 +42,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="a1H-Ly-uQ9"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="qZd-nb-Lqy"/>
+                    <navigationItem key="navigationItem" title="トーク" id="jTr-9t-0Bz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="51V-Xv-Dsm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="834" y="-785"/>
         </scene>
-        <!--Title-->
+        <!--タイムライン-->
         <scene sceneID="blg-Uw-cl7">
             <objects>
                 <viewController storyboardIdentifier="TimeLine" id="xZ3-3Z-Gbi" customClass="TimeLineViewController" customModule="VideoTimeLine" customModuleProvider="target" sceneMemberID="viewController">
@@ -56,6 +56,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bWe-mI-fAr">
+                                <rect key="frame" x="185" y="390" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LVH-vJ-fxK">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -70,6 +80,14 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmS-mV-13g" customClass="FloatingActionButton" customModule="VideoTimeLine" customModuleProvider="target">
+                                <rect key="frame" x="260" y="465" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <state key="normal" title="＋"/>
+                                <connections>
+                                    <action selector="menuTapped:" destination="xZ3-3Z-Gbi" eventType="touchUpInside" id="9sF-3p-2Qd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -79,14 +97,24 @@
                             <constraint firstItem="LVH-vJ-fxK" firstAttribute="leading" secondItem="dFj-JA-aw2" secondAttribute="leading" id="gKE-6p-EBv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dFj-JA-aw2"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="LVH-vJ-fxK"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="PzP-PP-KTf"/>
+                    <navigationItem key="navigationItem" title="タイムライン" id="jfr-VR-Tlt"/>
+                    <connections>
+                        <outlet property="addButton" destination="bmS-mV-13g" id="wKG-5h-LwI"/>
+                        <outlet property="menuBar" destination="bWe-mI-fAr" id="j3i-yN-fad"/>
+                        <outlet property="tableView" destination="LVH-vJ-fxK" id="dSs-WJ-krY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j50-IM-Ylb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="863" y="-32"/>
+            <point key="canvasLocation" x="862.5" y="-32.74647887323944"/>
         </scene>
-        <!--Title-->
+        <!--設定-->
         <scene sceneID="iOh-Lw-BPn">
             <objects>
                 <viewController storyboardIdentifier="Setting" id="Kgk-MR-IQb" customClass="SettingViewController" customModule="VideoTimeLine" customModuleProvider="target" sceneMemberID="viewController">
@@ -110,7 +138,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Yu-NM-hH2">
                                         <rect key="frame" x="0.0" y="100" width="320" height="50"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="ログアウト"/>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -128,7 +156,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6LM-4m-LrS"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="QHr-ha-1WC"/>
+                    <navigationItem key="navigationItem" title="設定" id="tWh-Wl-g5p"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gcr-bz-gR6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

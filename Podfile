@@ -24,5 +24,8 @@ target 'VideoTimeLine' do
     pod 'TextFieldEffects'
     pod 'AMScrollingNavbar'
     pod 'FirebaseUI'
+    pod 'SwipeableTabBarController'
+    pod 'RHSideButtons'
+    pod 'NextLevel'
     
 end

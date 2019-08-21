@@ -16,9 +16,10 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
 
     @IBOutlet weak var signupButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
-    
     @IBOutlet weak var signInButton: GIDSignInButton!
     
+    
+   
     
     
     override func viewDidLoad() {
@@ -47,12 +48,19 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         dimOverlay.opacity = 0.3 // 不透明度
         view.layer.insertSublayer(dimOverlay, at: 0)
         
+        // 最後まで再生したら最初から再生する
+        let playerObserver = NotificationCenter.default.addObserver(
+            forName: .AVPlayerItemDidPlayToEndTime,
+            object: player.currentItem,
+            queue: .main) { [weak playerLayer] _ in
+                playerLayer?.player?.seek(to: CMTime.zero)
+                playerLayer?.player?.play()
+                
         
-       
-        
-       
-
+        }
     }
+    
+    
     
     @IBAction func tappedSignUp(_ sender: UIButton) {
         
@@ -77,6 +85,9 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
     }
     
     
+        // ...
+    }
+    
 //    func flash () {
 //        
 //        UIView.animate(withDuration: 0.1
@@ -91,6 +102,6 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
     
     
     
-}
+
 
 
