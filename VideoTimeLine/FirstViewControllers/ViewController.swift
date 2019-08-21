@@ -8,15 +8,24 @@
 
 import UIKit
 import AVFoundation
+import Firebase
+import GoogleSignIn
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, GIDSignInUIDelegate {
 
     @IBOutlet weak var signupButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     
+    @IBOutlet weak var signInButton: GIDSignInButton!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().signIn()
         
         // Bundle Resourcesからsample.mp4を読み込んで再生
         let path = Bundle.main.path(forResource: "Owl - 18244", ofType: "mp4")!
@@ -27,7 +36,7 @@ class ViewController: UIViewController {
         let playerLayer = AVPlayerLayer(player: player)
         playerLayer.frame = view.bounds
         playerLayer.videoGravity = .resizeAspectFill
-        playerLayer.zPosition = -1 // ボタン等よりも後ろに表示
+        playerLayer.zPosition = -2 // ボタン等よりも後ろに表示
         view.layer.insertSublayer(playerLayer, at: 0) // 動画をレイヤーとして追加
         
         // 動画の上に重ねる半透明の黒いレイヤー
@@ -35,8 +44,13 @@ class ViewController: UIViewController {
         dimOverlay.frame = view.bounds
         dimOverlay.backgroundColor = UIColor.black.cgColor
         dimOverlay.zPosition = -1
-        dimOverlay.opacity = 0.6 // 不透明度
+        dimOverlay.opacity = 0.3 // 不透明度
         view.layer.insertSublayer(dimOverlay, at: 0)
+        
+        
+       
+        
+       
 
     }
     
@@ -62,17 +76,18 @@ class ViewController: UIViewController {
 //        }
     }
     
-    func flash () {
-        
-        UIView.animate(withDuration: 0.1
-            , delay: 0
-            , options: [.repeat,.autoreverse]
-            , animations: {
-                self.loginButton.alpha = 0
-        })
-        
-        
-    }
+    
+//    func flash () {
+//        
+//        UIView.animate(withDuration: 0.1
+//            , delay: 0
+//            , options: [.repeat,.autoreverse]
+//            , animations: {
+//                self.loginButton.alpha = 0
+//        })
+//        
+//        
+//    }
     
     
     

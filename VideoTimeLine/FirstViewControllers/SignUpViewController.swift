@@ -12,18 +12,23 @@ import TextFieldEffects
 
 class SignUpViewController: UIViewController {
 
+    @IBOutlet weak var nameTextField: YokoTextField!
     @IBOutlet weak var emailTextField: YokoTextField!
     @IBOutlet weak var passwordTextField: YokoTextField!
+    
+  
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     
     }
     
     // ユーザー新規作成
     @IBAction func createUser(_ sender: UIButton) {
-        guard let email = emailTextField.text, let password = passwordTextField.text else {return}
+        guard let _ = nameTextField.text, let email = emailTextField.text, let password = passwordTextField.text else {return}
         
         Auth.auth().createUser(withEmail: email, password: password, completion: {(user, error) in
             // エラー時の処理
@@ -62,8 +67,11 @@ class SignUpViewController: UIViewController {
     // タッチされたかを判断
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         // キーボードが開いていたら
-        if (emailTextField.isFirstResponder) {
+        if (nameTextField.isFirstResponder) {
             // 閉じる
+            nameTextField.resignFirstResponder()
+        }
+        if (emailTextField.isFirstResponder) {
             emailTextField.resignFirstResponder()
         }
         if (passwordTextField.isFirstResponder) {

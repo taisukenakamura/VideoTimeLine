@@ -20,10 +20,13 @@ class LoginViewController: UIViewController {
     // パスワード入力欄
     @IBOutlet weak var passwordTextField: YokoTextField!
     
+
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       
 
     }
     

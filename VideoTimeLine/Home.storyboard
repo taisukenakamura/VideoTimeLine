@@ -10,133 +10,129 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--タイムライン-->
-        <scene sceneID="Kx3-X7-t1E">
+        <!--Title-->
+        <scene sceneID="DHx-pk-YU1">
             <objects>
-                <navigationController id="DU3-8B-KAH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="タイムライン" image="インターネットのアイコン" id="0z7-WN-0hU"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CV4-Uu-ydz">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.48488646520000001" green="0.65016770960000003" blue="0.90200918910000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="gl2-Ly-LxE" kind="relationship" relationship="rootViewController" id="4DJ-c4-ZZh"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LRz-Ae-avG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-229" y="-102"/>
-        </scene>
-        <!--友達-->
-        <scene sceneID="Mfr-Yg-Ocd">
-            <objects>
-                <tableViewController storyboardIdentifier="Friend" id="9tc-N8-xP8" customClass="FriendTableViewController" customModule="VideoTimeLine" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="S4P-dG-0be">
+                <viewController storyboardIdentifier="Friends" id="Egx-4h-plU" customClass="FriendsViewController" customModule="VideoTimeLine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a33-lV-eH0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ahh-ps-ScU">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="firendsCell" id="qbW-D6-KJm">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qbW-D6-KJm" id="Tjy-fO-yJD">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="rkm-x9-gbF">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rkm-x9-gbF" id="5ie-L4-JF4">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="9tc-N8-xP8" id="Kp9-Em-TIU"/>
-                            <outlet property="delegate" destination="9tc-N8-xP8" id="MQL-xa-JyT"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="友達" id="fxS-27-Ntm"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9mp-gH-Zgg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="579" y="-865"/>
-        </scene>
-        <!--友達-->
-        <scene sceneID="lo3-zz-LfF">
-            <objects>
-                <navigationController id="q2Y-uf-ihZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="友達" image="フクロウアイコン4" id="dke-28-G0a"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Cln-sW-0a1">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.48488646520000001" green="0.65016770960000003" blue="0.90200918910000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="9tc-N8-xP8" kind="relationship" relationship="rootViewController" id="yb9-DR-AQp"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Vr0-ux-pvA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-456" y="-865"/>
-        </scene>
-        <!--タイムライン-->
-        <scene sceneID="aDN-HU-saN">
-            <objects>
-                <viewController storyboardIdentifier="Setting" id="gl2-Ly-LxE" customClass="SettingViewController" customModule="VideoTimeLine" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="lkJ-r8-5ir">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="v1z-Lw-lmt"/>
+                        <constraints>
+                            <constraint firstItem="a1H-Ly-uQ9" firstAttribute="trailing" secondItem="ahh-ps-ScU" secondAttribute="trailing" id="HbF-G7-uSU"/>
+                            <constraint firstItem="a1H-Ly-uQ9" firstAttribute="bottom" secondItem="ahh-ps-ScU" secondAttribute="bottom" id="Liv-sg-XWR"/>
+                            <constraint firstItem="ahh-ps-ScU" firstAttribute="leading" secondItem="a1H-Ly-uQ9" secondAttribute="leading" id="fXc-bx-Njn"/>
+                            <constraint firstItem="ahh-ps-ScU" firstAttribute="top" secondItem="a1H-Ly-uQ9" secondAttribute="top" id="luY-Rp-mn3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="a1H-Ly-uQ9"/>
                     </view>
-                    <navigationItem key="navigationItem" title="タイムライン" id="cOA-Dy-Gxu"/>
+                    <navigationItem key="navigationItem" title="Title" id="qZd-nb-Lqy"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="a1a-d2-8hx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="51V-Xv-Dsm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="795" y="-102"/>
+            <point key="canvasLocation" x="834" y="-785"/>
         </scene>
-        <!--設定-->
-        <scene sceneID="d5R-lq-2F3">
+        <!--Title-->
+        <scene sceneID="blg-Uw-cl7">
             <objects>
-                <tableViewController storyboardIdentifier="Timeline" id="Djt-Lu-3Eb" customClass="TimelLineTableViewController" customModule="VideoTimeLine" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="e3N-2m-Y6K">
+                <viewController storyboardIdentifier="TimeLine" id="xZ3-3Z-Gbi" customClass="TimeLineViewController" customModule="VideoTimeLine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jL5-Jh-E5a">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LVH-vJ-fxK">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimeLineCell" id="XEh-Fy-n75">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XEh-Fy-n75" id="Vi9-Fx-Ten">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="6ws-v2-zCD">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6ws-v2-zCD" id="qIE-Bd-1cJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="Djt-Lu-3Eb" id="iKC-C6-LgQ"/>
-                            <outlet property="delegate" destination="Djt-Lu-3Eb" id="LxI-GH-HfQ"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="設定" id="ah8-yM-kzp"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1Yq-1h-Se3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="LVH-vJ-fxK" firstAttribute="top" secondItem="dFj-JA-aw2" secondAttribute="top" id="4XD-0Z-qaz"/>
+                            <constraint firstItem="dFj-JA-aw2" firstAttribute="trailing" secondItem="LVH-vJ-fxK" secondAttribute="trailing" id="N15-Dw-MyW"/>
+                            <constraint firstItem="dFj-JA-aw2" firstAttribute="bottom" secondItem="LVH-vJ-fxK" secondAttribute="bottom" id="NbL-Lk-sQK"/>
+                            <constraint firstItem="LVH-vJ-fxK" firstAttribute="leading" secondItem="dFj-JA-aw2" secondAttribute="leading" id="gKE-6p-EBv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dFj-JA-aw2"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="PzP-PP-KTf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j50-IM-Ylb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="711" y="677"/>
+            <point key="canvasLocation" x="863" y="-32"/>
         </scene>
-        <!--設定-->
-        <scene sceneID="mKt-WL-hln">
+        <!--Title-->
+        <scene sceneID="iOh-Lw-BPn">
             <objects>
-                <navigationController id="VLi-8S-J87" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="設定" image="フクロウのフリー素材3" id="Z08-vy-jGo"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CjE-Qf-71f">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.48488646520000001" green="0.65016770960000003" blue="0.90200918910000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="Djt-Lu-3Eb" kind="relationship" relationship="rootViewController" id="0NG-24-Kxw"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7tS-um-0FH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="Setting" id="Kgk-MR-IQb" customClass="SettingViewController" customModule="VideoTimeLine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z5j-Sz-kH8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zo5-Zi-6EJ">
+                                <rect key="frame" x="0.0" y="64" width="320" height="150"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9u-Xg-Xla">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="26D-dh-twn"/>
+                                        </constraints>
+                                        <state key="normal" title="プロフィール編集"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fe8-cP-8Yr">
+                                        <rect key="frame" x="0.0" y="50" width="320" height="50"/>
+                                        <state key="normal" title="あ？"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Yu-NM-hH2">
+                                        <rect key="frame" x="0.0" y="100" width="320" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="1Yu-NM-hH2" firstAttribute="height" secondItem="d9u-Xg-Xla" secondAttribute="height" id="usD-LT-9wH"/>
+                                    <constraint firstItem="Fe8-cP-8Yr" firstAttribute="height" secondItem="d9u-Xg-Xla" secondAttribute="height" id="wzb-Cq-nio"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zo5-Zi-6EJ" firstAttribute="leading" secondItem="6LM-4m-LrS" secondAttribute="leading" id="IPf-oD-tkv"/>
+                            <constraint firstItem="zo5-Zi-6EJ" firstAttribute="top" secondItem="6LM-4m-LrS" secondAttribute="top" id="NOm-iG-c6K"/>
+                            <constraint firstItem="zo5-Zi-6EJ" firstAttribute="top" secondItem="6LM-4m-LrS" secondAttribute="top" id="bLT-Sh-vZS"/>
+                            <constraint firstItem="6LM-4m-LrS" firstAttribute="trailing" secondItem="zo5-Zi-6EJ" secondAttribute="trailing" id="hEt-TG-wQ7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6LM-4m-LrS"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="QHr-ha-1WC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gcr-bz-gR6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-231" y="678"/>
+            <point key="canvasLocation" x="919" y="731"/>
         </scene>
         <!--Home Tab Bar Controller-->
         <scene sceneID="jpu-s8-cMF">
@@ -149,14 +145,74 @@
                         <color key="barTintColor" red="0.48488646520000001" green="0.65016770960000003" blue="0.90200918910000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
-                        <segue destination="q2Y-uf-ihZ" kind="relationship" relationship="viewControllers" id="TMR-fU-pxS"/>
-                        <segue destination="DU3-8B-KAH" kind="relationship" relationship="viewControllers" id="OEF-fH-8xN"/>
-                        <segue destination="VLi-8S-J87" kind="relationship" relationship="viewControllers" id="7ew-lz-0uJ"/>
+                        <segue destination="WG8-Ys-PfJ" kind="relationship" relationship="viewControllers" id="E7D-41-aEw"/>
+                        <segue destination="fGz-3D-fmG" kind="relationship" relationship="viewControllers" id="98n-pV-Zuk"/>
+                        <segue destination="2rW-JI-xMV" kind="relationship" relationship="viewControllers" id="4FT-7G-ifO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KRd-IM-XW5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1597" y="-64"/>
+            <point key="canvasLocation" x="-1611" y="-94"/>
+        </scene>
+        <!--友達-->
+        <scene sceneID="J42-xd-qOA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WG8-Ys-PfJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="友達" image="フクロウのフリー素材3" id="rJd-cq-5i0"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WGb-il-doZ">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.48488646520000001" green="0.65016770960000003" blue="0.90200918910000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Egx-4h-plU" kind="relationship" relationship="rootViewController" id="Gfz-2x-Yqj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MfE-jO-kXW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-293" y="-785"/>
+        </scene>
+        <!--タイムライン-->
+        <scene sceneID="iby-Y4-Cwa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fGz-3D-fmG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="タイムライン" image="インターネットのアイコン" id="5na-N2-BZk"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AwJ-6V-j8r">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.48488646520000001" green="0.65016770960000003" blue="0.90200918910000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xZ3-3Z-Gbi" kind="relationship" relationship="rootViewController" id="OkT-mf-vgW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QjR-mw-dc6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-259" y="-32"/>
+        </scene>
+        <!--設定-->
+        <scene sceneID="ic2-0S-Koj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2rW-JI-xMV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="設定" image="フクロウアイコン4" id="tSd-G7-NHy"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="D7Y-Da-wgz">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.48488646520000001" green="0.65016770960000003" blue="0.90200918910000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Kgk-MR-IQb" kind="relationship" relationship="rootViewController" id="BJm-Ay-xBx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eMv-0t-kPR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-261" y="731"/>
         </scene>
     </scenes>
     <resources>

@@ -23,4 +23,6 @@ target 'VideoTimeLine' do
     pod 'Firebase/Firestore'
     pod 'TextFieldEffects'
     pod 'AMScrollingNavbar'
+    pod 'FirebaseUI'
+    
 end
