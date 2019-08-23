@@ -1,21 +1,69 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FriendsViewController" customModule="VideoTimeLine" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="FriendsTableViewCell" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendsCell" id="KGk-i7-Jjw" customClass="FriendsTableViewCell" customModule="VideoTimeLine" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ix8-VG-Z1S">
+                        <rect key="frame" x="0.0" y="0.0" width="45" height="43.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="45" id="KRi-tU-MW8"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpr-lf-99h">
+                        <rect key="frame" x="270" y="0.0" width="50" height="43.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="nIm-yp-eVD"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="友達検索アイコン (1)"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbe-SF-kW3">
+                        <rect key="frame" x="53" y="0.0" width="150" height="43.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="Hox-6e-J5d"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="qpr-lf-99h" secondAttribute="trailing" id="M93-aO-nq9"/>
+                    <constraint firstItem="qpr-lf-99h" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="RKk-7U-Hsc"/>
+                    <constraint firstItem="ix8-VG-Z1S" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="URi-47-90c"/>
+                    <constraint firstItem="mbe-SF-kW3" firstAttribute="leading" secondItem="ix8-VG-Z1S" secondAttribute="trailing" constant="8" symbolic="YES" id="Wvr-oL-2Tj"/>
+                    <constraint firstItem="ix8-VG-Z1S" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Zae-IG-kL8"/>
+                    <constraint firstAttribute="bottom" secondItem="mbe-SF-kW3" secondAttribute="bottom" id="dsX-UV-G6r"/>
+                    <constraint firstItem="mbe-SF-kW3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ejj-SJ-mmN"/>
+                    <constraint firstAttribute="bottom" secondItem="ix8-VG-Z1S" secondAttribute="bottom" id="tUc-6y-j8H"/>
+                    <constraint firstAttribute="bottom" secondItem="qpr-lf-99h" secondAttribute="bottom" id="zdq-0j-a47"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="faceImageView" destination="ix8-VG-Z1S" id="vAI-ak-RaN"/>
+                <outlet property="locationLabel" destination="qpr-lf-99h" id="g0o-2H-xCo"/>
+                <outlet property="nameLabel" destination="mbe-SF-kW3" id="0SJ-Ew-hmP"/>
+            </connections>
+            <point key="canvasLocation" x="47.826086956521742" y="34.821428571428569"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="友達検索アイコン (1)" width="48" height="48"/>
+    </resources>
 </document>

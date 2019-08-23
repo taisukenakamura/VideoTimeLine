@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SettingViewController: UIViewController {
 
@@ -14,5 +15,27 @@ class SettingViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func editAction(_ sender: Any) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Profile", bundle: nil)
+        // 移動先のvcをインスタンス化(ここの"Main"はStoryboardId。"Main"は起動時に設定されています。)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Edit")
+        // 遷移処理
+        self.present(vc, animated: true)
+    }
+    
+    @IBAction func LogoutAction(_ sender: Any) {
+        
+        // ログアウト処理
+        try! Auth.auth().signOut()
+        // storyboardのfileの特定
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        // 移動先のvcをインスタンス化
+        let vc = storyboard.instantiateViewController(withIdentifier: "Main")
+        // 遷移処理
+        self.present(vc, animated: true)
+    }
+    
+    
     
 }

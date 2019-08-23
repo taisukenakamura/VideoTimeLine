@@ -8,10 +8,14 @@
 
 import UIKit
 import CoreLocation
+import MapKit
 
 class LocationViewController: UIViewController, CLLocationManagerDelegate {
    
     var locationManager: CLLocationManager!
+    @IBOutlet weak var mapView: MKMapView!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +42,14 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate {
         
         print("latitude: \(latitude!)\nlongitude: \(longitude!)")
     }
+    
+    // 前の画面に戻る
+    @IBAction func backButton(_ sender: UIBarButtonItem) {
+        // 
+        self.dismiss(animated: true, completion: nil)
+        
+    }
+    
 }
 
 

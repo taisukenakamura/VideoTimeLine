@@ -1,7 +1,104 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Edit View Controller-->
+        <scene sceneID="3K9-iz-mN1">
+            <objects>
+                <viewController storyboardIdentifier="Edit" id="04y-vm-MbE" customClass="EditViewController" customModule="VideoTimeLine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uYL-U6-IKT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="E4T-WH-hcI">
+                                <rect key="frame" x="60" y="70" width="200" height="400"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9lB-UI-Rar" customClass="CircleImageView" customModule="VideoTimeLine" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="AS0-oY-GPo"/>
+                                            <constraint firstAttribute="width" secondItem="9lB-UI-Rar" secondAttribute="height" multiplier="1:1" id="FQ2-ln-wpa"/>
+                                            <constraint firstAttribute="height" constant="200" id="ajV-gS-22v"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vzk-5t-e6I">
+                                        <rect key="frame" x="0.0" y="250" width="200" height="150"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0VN-0S-JfL">
+                                                <rect key="frame" x="25" y="0.0" width="150" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="AYa-IJ-Cua"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yNR-6X-kpS">
+                                                <rect key="frame" x="25" y="40" width="150" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="2lv-Jj-q7o"/>
+                                                    <constraint firstAttribute="height" constant="30" id="ce0-Nr-xYx"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEU-4X-pMl">
+                                                <rect key="frame" x="25" y="80" width="150" height="30"/>
+                                                <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="Wni-an-LBc"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="アイコン画像変更"/>
+                                                <connections>
+                                                    <action selector="changeProPhoto:" destination="04y-vm-MbE" eventType="touchUpInside" id="cQx-7W-Skj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVN-dd-6fc">
+                                                <rect key="frame" x="25" y="120" width="150" height="30"/>
+                                                <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="決定"/>
+                                                <connections>
+                                                    <action selector="changeButton:" destination="04y-vm-MbE" eventType="touchUpInside" id="OsF-x1-Shf"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="yNR-6X-kpS" firstAttribute="width" secondItem="0VN-0S-JfL" secondAttribute="width" id="1hA-qb-KM5"/>
+                                            <constraint firstItem="IVN-dd-6fc" firstAttribute="width" secondItem="0VN-0S-JfL" secondAttribute="width" id="Awj-fX-lMn"/>
+                                            <constraint firstItem="LEU-4X-pMl" firstAttribute="width" secondItem="0VN-0S-JfL" secondAttribute="width" id="P7E-ID-84M"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.48488646520000001" green="0.65016770960000003" blue="0.90200918910000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="E4T-WH-hcI" firstAttribute="top" secondItem="428-vm-6Nu" secondAttribute="top" constant="50" id="owd-4h-Q4n"/>
+                            <constraint firstItem="E4T-WH-hcI" firstAttribute="centerX" secondItem="uYL-U6-IKT" secondAttribute="centerX" id="sA9-05-Ndb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="428-vm-6Nu"/>
+                    </view>
+                    <connections>
+                        <outlet property="phraseTextField" destination="yNR-6X-kpS" id="ZnH-TY-9FO"/>
+                        <outlet property="profileImageView" destination="9lB-UI-Rar" id="sNS-fO-pdM"/>
+                        <outlet property="userNameTextField" destination="0VN-0S-JfL" id="rAA-r2-X9D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gdl-tI-nQ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-120" y="138.38028169014083"/>
+        </scene>
+    </scenes>
 </document>

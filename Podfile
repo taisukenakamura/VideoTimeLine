@@ -28,5 +28,5 @@ target 'VideoTimeLine' do
     pod 'RHSideButtons'
     pod 'NextLevel'
     pod 'FirebaseUI' 
-    
+    pod 'Material'
 end

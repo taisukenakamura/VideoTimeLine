@@ -22,12 +22,48 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="firendsCell" id="qbW-D6-KJm">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendsViewCell" rowHeight="76" id="qbW-D6-KJm">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qbW-D6-KJm" id="Tjy-fO-yJD">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="75.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="人物アイコン (1)" translatesAutoresizingMaskIntoConstraints="NO" id="LCL-gT-iLr">
+                                                    <rect key="frame" x="0.0" y="0.0" width="70" height="75.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="fvy-oS-6qa"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5U-0u-Ao4">
+                                                    <rect key="frame" x="70" y="16" width="200" height="44"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SvH-A7-grv">
+                                                    <rect key="frame" x="270" y="0.0" width="50" height="75.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="Hvk-sl-Su7"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button" image="日本地図のアイコン"/>
+                                                    <connections>
+                                                        <action selector="locationButton:" destination="Egx-4h-plU" eventType="touchUpInside" id="ccU-Ja-oS3"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="W5U-0u-Ao4" secondAttribute="bottom" constant="5" id="8HD-ZK-ckE"/>
+                                                <constraint firstItem="LCL-gT-iLr" firstAttribute="top" secondItem="Tjy-fO-yJD" secondAttribute="top" id="DtT-hh-eiX"/>
+                                                <constraint firstItem="W5U-0u-Ao4" firstAttribute="leading" secondItem="LCL-gT-iLr" secondAttribute="trailing" id="K35-bd-NAW"/>
+                                                <constraint firstAttribute="bottom" secondItem="SvH-A7-grv" secondAttribute="bottom" id="S2h-md-6M0"/>
+                                                <constraint firstItem="LCL-gT-iLr" firstAttribute="leading" secondItem="Tjy-fO-yJD" secondAttribute="leading" id="Uza-yV-eK5"/>
+                                                <constraint firstAttribute="bottom" secondItem="LCL-gT-iLr" secondAttribute="bottom" id="V4e-Ov-6cT"/>
+                                                <constraint firstItem="SvH-A7-grv" firstAttribute="leading" secondItem="W5U-0u-Ao4" secondAttribute="trailing" id="bdS-nf-Ger"/>
+                                                <constraint firstItem="SvH-A7-grv" firstAttribute="top" secondItem="Tjy-fO-yJD" secondAttribute="top" id="bm8-tq-2bX"/>
+                                                <constraint firstItem="W5U-0u-Ao4" firstAttribute="top" secondItem="Tjy-fO-yJD" secondAttribute="topMargin" constant="5" id="diY-QR-Avt"/>
+                                                <constraint firstAttribute="trailing" secondItem="SvH-A7-grv" secondAttribute="trailing" id="zrV-xe-IDz"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -43,10 +79,13 @@
                         <viewLayoutGuide key="safeArea" id="a1H-Ly-uQ9"/>
                     </view>
                     <navigationItem key="navigationItem" title="トーク" id="jTr-9t-0Bz"/>
+                    <connections>
+                        <outlet property="tableView" destination="ahh-ps-ScU" id="sGr-wN-Nw1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="51V-Xv-Dsm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="834" y="-785"/>
+            <point key="canvasLocation" x="832.5" y="-785.91549295774644"/>
         </scene>
         <!--タイムライン-->
         <scene sceneID="blg-Uw-cl7">
@@ -60,13 +99,28 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimeLineCell" id="XEh-Fy-n75">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="253" id="XEh-Fy-n75" customClass="TableViewCell" customModule="VideoTimeLine" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="253"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XEh-Fy-n75" id="Vi9-Fx-Ten">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XEh-Fy-n75" id="Vi9-Fx-Ten">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="252.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tpj-Vg-1Dz">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="252.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="tpj-Vg-1Dz" secondAttribute="bottom" id="3Ya-9y-mcz"/>
+                                                <constraint firstItem="tpj-Vg-1Dz" firstAttribute="top" secondItem="Vi9-Fx-Ten" secondAttribute="top" id="Cc1-UZ-ciH"/>
+                                                <constraint firstAttribute="trailing" secondItem="tpj-Vg-1Dz" secondAttribute="trailing" id="cR4-4i-a3H"/>
+                                                <constraint firstItem="tpj-Vg-1Dz" firstAttribute="leading" secondItem="Vi9-Fx-Ten" secondAttribute="leading" id="eIj-cF-2ym"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="movieView" destination="tpj-Vg-1Dz" id="452-9c-0tq"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -91,7 +145,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLQ-yw-Q4Z">
-                                        <rect key="frame" x="28" y="25" width="25" height="25"/>
+                                        <rect key="frame" x="26" y="31" width="25" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="フォルダアイコン14"/>
                                         <connections>
@@ -136,7 +190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j50-IM-Ylb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1044" y="-81"/>
+            <point key="canvasLocation" x="851.25" y="-33.802816901408448"/>
         </scene>
         <!--設定-->
         <scene sceneID="iOh-Lw-BPn">
@@ -166,6 +220,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Yu-NM-hH2">
                                         <rect key="frame" x="0.0" y="100" width="320" height="50"/>
                                         <state key="normal" title="ログアウト"/>
+                                        <connections>
+                                            <action selector="LogoutAction:" destination="Kgk-MR-IQb" eventType="touchUpInside" id="s47-Lx-FW2"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -187,7 +244,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gcr-bz-gR6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1043" y="731"/>
+            <point key="canvasLocation" x="878" y="731"/>
         </scene>
         <!--Home Tab Bar Controller-->
         <scene sceneID="jpu-s8-cMF">
@@ -276,6 +333,8 @@
         <image name="フォルダアイコン14" width="32" height="32"/>
         <image name="フクロウのフリー素材3" width="32" height="32"/>
         <image name="フクロウアイコン4" width="32" height="32"/>
+        <image name="人物アイコン (1)" width="64" height="64"/>
+        <image name="日本地図のアイコン" width="32" height="32"/>
         <image name="鉛筆アイコン　4" width="32" height="32"/>
     </resources>
 </document>

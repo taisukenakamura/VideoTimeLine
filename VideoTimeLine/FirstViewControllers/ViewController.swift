@@ -14,13 +14,13 @@ import FirebaseUI
 
 
 class ViewController: UIViewController, FUIAuthDelegate {
-
+    
     @IBOutlet weak var signupButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var AuthButton: UIButton!
     
     
-   var authUI: FUIAuth { get { return FUIAuth.defaultAuthUI()!}}
+    var authUI: FUIAuth { get { return FUIAuth.defaultAuthUI()!}}
     // 認証に利用するプロバイダの選択
     let providers: [FUIAuthProvider] = [
         FUIGoogleAuth(),
@@ -62,7 +62,7 @@ class ViewController: UIViewController, FUIAuthDelegate {
                 playerLayer?.player?.seek(to: CMTime.zero)
                 playerLayer?.player?.play()
                 
-        
+                
         }
     }
     // ボタンをタップした際の挙動
@@ -93,7 +93,7 @@ class ViewController: UIViewController, FUIAuthDelegate {
         
         let storyboard: UIStoryboard = UIStoryboard(name: "Signup", bundle: nil)
         let svc: SignUpViewController = storyboard.instantiateViewController(withIdentifier: "Signup") as! SignUpViewController
-         self.present(svc, animated: true)
+        self.present(svc, animated: true)
         
     }
     // Login
@@ -104,11 +104,11 @@ class ViewController: UIViewController, FUIAuthDelegate {
         self.present(lvc, animated: true)
     }
     
-    }
-    
+}
 
-    
-    
+
+
+
 
 
 

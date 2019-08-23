@@ -11,29 +11,29 @@ import FirebaseAuth
 import TextFieldEffects
 
 class SignUpViewController: UIViewController {
-
-    @IBOutlet weak var nameTextField: YokoTextField!
+    
+    
     @IBOutlet weak var emailTextField: YokoTextField!
     @IBOutlet weak var passwordTextField: YokoTextField!
     
-  
+    
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    
+        
     }
     
     // ユーザー新規作成
     @IBAction func createUser(_ sender: UIButton) {
-        guard let _ = nameTextField.text, let email = emailTextField.text, let password = passwordTextField.text else {return}
+        guard  let email = emailTextField.text, let password = passwordTextField.text else {return}
         
         Auth.auth().createUser(withEmail: email, password: password, completion: {(user, error) in
             // エラー時の処理
             if let error = error {
-                 self.showErrorAlert(error: error)
+                self.showErrorAlert(error: error)
                 // 成功時の処理
             } else {
                 
@@ -66,11 +66,7 @@ class SignUpViewController: UIViewController {
     // キーボードを閉じる処理
     // タッチされたかを判断
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        // キーボードが開いていたら
-        if (nameTextField.isFirstResponder) {
-            // 閉じる
-            nameTextField.resignFirstResponder()
-        }
+        
         if (emailTextField.isFirstResponder) {
             emailTextField.resignFirstResponder()
         }
@@ -79,6 +75,6 @@ class SignUpViewController: UIViewController {
         }
     }
     
-
+    
 }
 

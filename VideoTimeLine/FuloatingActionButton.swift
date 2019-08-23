@@ -29,9 +29,4 @@ class FloatingActionButton: UIButton {
         return super.beginTracking(touch, with: event)
     }
     
-//    open override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
-//        <#code#>
-//    }
-    
-  
 }

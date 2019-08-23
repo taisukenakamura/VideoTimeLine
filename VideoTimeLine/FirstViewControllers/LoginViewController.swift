@@ -13,21 +13,21 @@ import TextFieldEffects
 
 
 class LoginViewController: UIViewController {
-
+    
     
     // メール入力欄
     @IBOutlet weak var emailTextField: YokoTextField!
     // パスワード入力欄
     @IBOutlet weak var passwordTextField: YokoTextField!
     
-
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
-
+        
+        
     }
     
     @IBAction func userLogin(_ sender: UIButton) {
@@ -42,12 +42,12 @@ class LoginViewController: UIViewController {
                 self.showErrorAlert(error: error)
             } else {
                 // 認証成功
-               
+                
                 print("ログイン成功")
                 self.toTimeLine()
             }
         })
-
+        
     }
     
     // タイムラインへ遷移
@@ -81,5 +81,5 @@ class LoginViewController: UIViewController {
             passwordTextField.resignFirstResponder()
         }
     }
-
+    
 }
