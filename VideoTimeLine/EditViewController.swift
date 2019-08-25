@@ -10,7 +10,6 @@ import UIKit
 import FirebaseAuth
 
 class EditViewController: UIViewController,UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
     
     @IBOutlet weak var profileImageView: CircleImageView!
     
@@ -18,10 +17,9 @@ class EditViewController: UIViewController,UITextFieldDelegate, UIImagePickerCon
     
     @IBOutlet weak var phraseTextField: UITextField!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         getProfile()
     }
     
@@ -57,7 +55,6 @@ class EditViewController: UIViewController,UITextFieldDelegate, UIImagePickerCon
             phraseTextField.text = ""
         }
     }
-  
     
     @IBAction func changeProPhoto(_ sender: Any) {
         
@@ -97,7 +94,6 @@ class EditViewController: UIViewController,UITextFieldDelegate, UIImagePickerCon
             self.present(cameraPicker, animated: true)
         }
     }
-    
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         //
@@ -144,6 +140,4 @@ class EditViewController: UIViewController,UITextFieldDelegate, UIImagePickerCon
             phraseTextField.resignFirstResponder()
         }
     }
-
-    
 }

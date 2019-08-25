@@ -10,26 +10,18 @@ import UIKit
 import FirebaseAuth
 import TextFieldEffects
 
-
-
 class LoginViewController: UIViewController {
-    
-    
+
     // メール入力欄
     @IBOutlet weak var emailTextField: YokoTextField!
     // パスワード入力欄
     @IBOutlet weak var passwordTextField: YokoTextField!
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
     }
-    
+    // ログイン
     @IBAction func userLogin(_ sender: UIButton) {
         guard let email = emailTextField.text, let password = passwordTextField.text else {
             return

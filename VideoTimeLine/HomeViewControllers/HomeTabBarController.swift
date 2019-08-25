@@ -8,9 +8,7 @@
 import UIKit
 import SwipeableTabBarController
 
-
 class HomeTabBarController: SwipeableTabBarController {
-    
     // スクロール機能の追加
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,41 +31,5 @@ class HomeTabBarController: SwipeableTabBarController {
             // Handle didSelect viewController method here
           
         }
-      
     }
-    
-    
-    
-  
-
 }
-
-//extension RAMItemAnimation {
-//    
-//
-//        func playAnimation(_ icon: UIImageView, textLabel: UILabel) {
-//            playBounceAnimation(icon)
-//            textLabel.textColor = textSelectedColor
-//        }
-//
-//        func deselectAnimation(_ icon: UIImageView, textLabel: UILabel, defaultTextColor: UIColor, defaultIconColor: UIColor) {
-//            textLabel.textColor = defaultTextColor
-//        }
-//
-//        func selectedState(_ icon: UIImageView, textLabel: UILabel) {
-//            textLabel.textColor = textSelectedColor
-//        }
-//        
-//        func playBounceAnimation(_ icon : UIImageView) {
-//
-//            let bounceAnimation = CAKeyframeAnimation(keyPath: "transform.scale")
-//            bounceAnimation.values = [1.0 ,1.4, 0.9, 1.15, 0.95, 1.02, 1.0]
-//            bounceAnimation.duration = TimeInterval(duration)
-//            bounceAnimation.calculationMode = CAAnimationCalculationMode.cubic
-//
-//            icon.layer.add(bounceAnimation, forKey: "bounceAnimation")
-//       }
-//    }
-//
-
-

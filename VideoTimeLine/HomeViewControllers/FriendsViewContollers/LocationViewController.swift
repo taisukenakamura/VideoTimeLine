@@ -20,7 +20,7 @@ class LocationViewController: UIViewController {
     
     // ロングタップしたときに立てるピンを定義
     var pinByLongPress: MKPointAnnotation!
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,7 @@ class LocationViewController: UIViewController {
         fech()
         
     }
-
+    
     @IBAction func longPress(_ sender: UILongPressGestureRecognizer) {
         print("longPress")
         //ロングタップの最初の感知のみ受け取る
@@ -57,7 +57,7 @@ class LocationViewController: UIViewController {
         
         // 保存
         firebaseSave(location: longPressedCoordinate)
-
+        
     }
     func firebaseSave(location: CLLocationCoordinate2D) {
         var ref: DocumentReference? = nil
@@ -72,7 +72,7 @@ class LocationViewController: UIViewController {
             }
         }
     }
-
+    
     func fech() {
         db.collection("mapLocation").getDocuments() { (querySnapshot, err) in
             if let err = err {
@@ -99,14 +99,13 @@ class LocationViewController: UIViewController {
             }
         }
     }
-
+    
     // 前の画面に戻る
     @IBAction func backButton(_ sender: UIBarButtonItem) {
         
         self.dismiss(animated: true, completion: nil)
         fech()
     }
-    
 }
 
 extension ViewController: CLLocationManagerDelegate {
@@ -133,6 +132,3 @@ extension ViewController: CLLocationManagerDelegate {
         }
     }
 }
-
-
-

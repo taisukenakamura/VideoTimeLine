@@ -27,6 +27,6 @@ target 'VideoTimeLine' do
     pod 'SwipeableTabBarController'
     pod 'NextLevel'
     pod 'FirebaseUI' 
-    
+    pod 'IQKeyboardManagerSwift'
      
 end

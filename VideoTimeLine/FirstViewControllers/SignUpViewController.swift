@@ -8,16 +8,15 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 import TextFieldEffects
+
 
 class SignUpViewController: UIViewController {
     
     
     @IBOutlet weak var emailTextField: YokoTextField!
     @IBOutlet weak var passwordTextField: YokoTextField!
-    
-    
-    
     
     
     override func viewDidLoad() {
@@ -37,7 +36,10 @@ class SignUpViewController: UIViewController {
                 // 成功時の処理
             } else {
                 
-                
+                let db = Firestore.firestore()
+                let users = db.collection("users").document("\(String(describing: Auth.auth().currentUser?.uid))")
+                let userData: NSDictionary = [email: "email", password: "password"]
+                users.setData(userData as! [String : Any])
                 self.toTimeLine()
             }
         })

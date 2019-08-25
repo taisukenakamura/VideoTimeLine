@@ -21,16 +21,23 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="owl-158411_1280" translatesAutoresizingMaskIntoConstraints="NO" id="1kr-zE-618">
                                 <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOOK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bha-bb-u8Z">
+                                <rect key="frame" x="76.5" y="70" width="167" height="87"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="80"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="J2h-NN-TDy">
-                                <rect key="frame" x="88.5" y="198.5" width="143" height="171"/>
+                                <rect key="frame" x="88.5" y="207" width="143" height="211"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="day@g.com" placeholder="Email or Number" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="V9P-ws-3iw" customClass="YokoTextField" customModule="TextFieldEffects">
-                                        <rect key="frame" x="0.0" y="0.0" width="143" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="143" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="go"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
-                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                 <color key="value" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -38,16 +45,16 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="000000" placeholder="Password" adjustsFontForContentSizeCategory="YES" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="9ro-kL-Eei" customClass="YokoTextField" customModule="TextFieldEffects">
-                                        <rect key="frame" x="0.0" y="70" width="143" height="30"/>
+                                        <rect key="frame" x="0.0" y="90" width="143" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="8gL-ph-xwc"/>
+                                            <constraint firstAttribute="height" constant="50" id="8gL-ph-xwc"/>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
-                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                 <color key="value" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -55,7 +62,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtf-zD-ywp">
-                                        <rect key="frame" x="0.0" y="140" width="143" height="31"/>
+                                        <rect key="frame" x="0.0" y="180" width="143" height="31"/>
                                         <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -74,22 +81,15 @@
                                     <constraint firstItem="9ro-kL-Eei" firstAttribute="height" secondItem="V9P-ws-3iw" secondAttribute="height" id="M0A-Yx-vZN"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOOK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bha-bb-u8Z">
-                                <rect key="frame" x="76.5" y="81.5" width="167" height="87"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="80"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="0.0" height="0.0"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.48488646520000001" green="0.79797196059999997" blue="0.90200918910000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="VNl-af-pG0" firstAttribute="bottom" secondItem="1kr-zE-618" secondAttribute="bottom" id="298-V1-fOY"/>
                             <constraint firstItem="1kr-zE-618" firstAttribute="leading" secondItem="VNl-af-pG0" secondAttribute="leading" id="Gwn-o7-Y2C"/>
-                            <constraint firstItem="J2h-NN-TDy" firstAttribute="centerY" secondItem="43n-Pz-ZT1" secondAttribute="centerY" id="JkL-xj-dBZ"/>
                             <constraint firstItem="1kr-zE-618" firstAttribute="top" secondItem="VNl-af-pG0" secondAttribute="top" id="TeL-tJ-wNH"/>
                             <constraint firstItem="J2h-NN-TDy" firstAttribute="centerX" secondItem="43n-Pz-ZT1" secondAttribute="centerX" id="VZl-B2-RLt"/>
-                            <constraint firstItem="J2h-NN-TDy" firstAttribute="top" secondItem="bha-bb-u8Z" secondAttribute="bottom" constant="30" id="jKx-Wz-dJw"/>
+                            <constraint firstItem="VNl-af-pG0" firstAttribute="bottom" secondItem="J2h-NN-TDy" secondAttribute="bottom" constant="150" id="enz-yj-bqd"/>
+                            <constraint firstItem="bha-bb-u8Z" firstAttribute="top" secondItem="VNl-af-pG0" secondAttribute="top" constant="50" id="knz-Me-kn1"/>
                             <constraint firstItem="1kr-zE-618" firstAttribute="trailing" secondItem="VNl-af-pG0" secondAttribute="trailing" id="u8i-3M-S8a"/>
                             <constraint firstItem="bha-bb-u8Z" firstAttribute="centerX" secondItem="43n-Pz-ZT1" secondAttribute="centerX" id="zua-gi-fHu"/>
                         </constraints>
@@ -102,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V35-SN-ToG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="26" y="-33"/>
+            <point key="canvasLocation" x="24.375" y="-16.901408450704224"/>
         </scene>
     </scenes>
     <resources>

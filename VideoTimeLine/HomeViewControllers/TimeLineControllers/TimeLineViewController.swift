@@ -13,19 +13,16 @@ import Firebase
 
 class TimeLineViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate,UIScrollViewDelegate {
     
-   
-    // ごみアニメーションの追加
+    // tableViewの接続
     @IBOutlet weak var tableView: UITableView!
-    
     // mp4のresourceを配列で格納
     let resourceList: [String] = ["Owl - 18244", "588411524.751567", "Owl - 18244", "Owl - 18244"]
     // refreshControlインスタンス化
     let refreshControl = UIRefreshControl()
     var items = [NSDictionary]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-     
         // tableViewデリゲート接続
         tableView.delegate = self
         tableView.dataSource = self
@@ -35,7 +32,6 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
         
     }
-    
     // 更新
     @objc func refresh() {
         // 初期化
@@ -54,43 +50,23 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
     // セルの設定
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableViewCell
-        
-        
+        // セルにビデオを流す
         cell.playVideo(resourceList[indexPath.row])
         
-        
-    
         return cell
     }
     // セルの高さ設定
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 340
     }
-   
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        print("**willDisplay:\(indexPath.row)")
-//        testIndexrow = indexPath.row
-        
-    }
     
-    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        
-        print("**didEndDisplaying")
-        
-    }
     // ナビゲーションバーを消す
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-    
         
         if scrollView.panGestureRecognizer.translation(in: scrollView).y < 0 {
             navigationController?.setNavigationBarHidden(true, animated: true)
         } else {
             navigationController?.setNavigationBarHidden(false, animated: true)
         }
-        
     }
-    
 }
-
-
-

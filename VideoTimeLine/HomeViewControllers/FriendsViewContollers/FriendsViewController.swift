@@ -41,9 +41,6 @@ class FriendsViewController: UIViewController,UITableViewDelegate, UITableViewDa
         return 75
         
     }
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        <#code#>
-//    }
     // ナビゲーションバーを消す
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         

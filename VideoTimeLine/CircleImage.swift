@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+// imageViewを丸くする
 class CircleImageView: UIImageView {
     @IBInspectable var borderColor :  UIColor = UIColor.black
     @IBInspectable var borderWidth :  CGFloat = 0.1

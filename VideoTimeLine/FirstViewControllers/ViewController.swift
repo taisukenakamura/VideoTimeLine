@@ -18,8 +18,7 @@ class ViewController: UIViewController, FUIAuthDelegate {
     @IBOutlet weak var signupButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var AuthButton: UIButton!
-    
-    
+    // Google、電話番号認証
     var authUI: FUIAuth { get { return FUIAuth.defaultAuthUI()!}}
     // 認証に利用するプロバイダの選択
     let providers: [FUIAuthProvider] = [
@@ -62,7 +61,6 @@ class ViewController: UIViewController, FUIAuthDelegate {
                 playerLayer?.player?.seek(to: CMTime.zero)
                 playerLayer?.player?.play()
                 
-                
         }
     }
     // ボタンをタップした際の挙動
@@ -90,7 +88,7 @@ class ViewController: UIViewController, FUIAuthDelegate {
     
     // Signin
     @IBAction func tappedSignUp(_ sender: UIButton) {
-        
+        // signup画面へ
         let storyboard: UIStoryboard = UIStoryboard(name: "Signup", bundle: nil)
         let svc: SignUpViewController = storyboard.instantiateViewController(withIdentifier: "Signup") as! SignUpViewController
         self.present(svc, animated: true)
@@ -98,7 +96,7 @@ class ViewController: UIViewController, FUIAuthDelegate {
     }
     // Login
     @IBAction func tappedLogIn(_ sender: UIButton) {
-        
+        // ログイン画面へ
         let storyboard: UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
         let lvc: LoginViewController = storyboard.instantiateViewController(withIdentifier: "Login") as! LoginViewController
         self.present(lvc, animated: true)
