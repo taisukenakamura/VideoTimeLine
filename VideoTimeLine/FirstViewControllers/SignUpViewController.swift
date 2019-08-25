@@ -74,7 +74,5 @@ class SignUpViewController: UIViewController {
             passwordTextField.resignFirstResponder()
         }
     }
-    
-    
 }
 

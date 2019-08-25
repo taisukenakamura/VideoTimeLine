@@ -51,7 +51,7 @@ class ViewController: UIViewController, FUIAuthDelegate {
         dimOverlay.frame = view.bounds
         dimOverlay.backgroundColor = UIColor.black.cgColor
         dimOverlay.zPosition = -1
-        dimOverlay.opacity = 0.3 // 不透明度
+        dimOverlay.opacity = 0.1 // 不透明度
         view.layer.insertSublayer(dimOverlay, at: 0)
         
         // 最後まで再生したら最初から再生する

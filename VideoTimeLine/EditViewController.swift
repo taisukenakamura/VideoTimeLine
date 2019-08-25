@@ -47,6 +47,15 @@ class EditViewController: UIViewController,UITextFieldDelegate, UIImagePickerCon
             // なければ匿名としておく
             userNameTextField.text = "匿名"
         }
+        
+        // 名前情報
+        if let yourPhrase = UserDefaults.standard.object(forKey: "phrase") as? String {
+            // userNameTextFieldへ代入
+            phraseTextField.text = yourPhrase
+        } else {
+            // なければ匿名としておく
+            phraseTextField.text = ""
+        }
     }
   
     
@@ -121,7 +130,7 @@ class EditViewController: UIViewController,UITextFieldDelegate, UIImagePickerCon
         // ユーザー名の保存
         UserDefaults.standard.set(userName, forKey: "userName")
         // ひとことの保存
-        UserDefaults.standard.set(phrase, forKey: "pharase")
+        UserDefaults.standard.set(phrase, forKey: "phrase")
         // 遷移
         dismiss(animated: true)
     }

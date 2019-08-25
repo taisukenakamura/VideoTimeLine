@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Location View Controller-->
+        <scene sceneID="Stv-uf-Tfw">
+            <objects>
+                <viewController storyboardIdentifier="Location" id="Gti-EM-6i6" customClass="LocationViewController" customModule="VideoTimeLine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kh2-xY-x9z">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="89H-i5-U12">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="←" id="Yeu-lo-8iK">
+                                        <connections>
+                                            <action selector="backButton:" destination="Gti-EM-6i6" id="0bl-HG-ruY"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="MTl-42-dy3">
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="0Dn-07-xQk" appends="YES" id="nOV-Fo-fnZ"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MTl-42-dy3" firstAttribute="top" secondItem="AGV-oP-wrL" secondAttribute="top" id="A5t-1k-WNC"/>
+                            <constraint firstItem="89H-i5-U12" firstAttribute="trailing" secondItem="AGV-oP-wrL" secondAttribute="trailing" id="Hjw-fh-JIY"/>
+                            <constraint firstItem="89H-i5-U12" firstAttribute="leading" secondItem="AGV-oP-wrL" secondAttribute="leading" id="JwB-Nm-fsG"/>
+                            <constraint firstItem="MTl-42-dy3" firstAttribute="leading" secondItem="AGV-oP-wrL" secondAttribute="leading" id="oLW-m9-3tf"/>
+                            <constraint firstItem="89H-i5-U12" firstAttribute="top" secondItem="MTl-42-dy3" secondAttribute="bottom" id="oTZ-Kb-41O"/>
+                            <constraint firstItem="89H-i5-U12" firstAttribute="bottom" secondItem="AGV-oP-wrL" secondAttribute="bottom" id="sDh-44-9WP"/>
+                            <constraint firstItem="AGV-oP-wrL" firstAttribute="trailing" secondItem="MTl-42-dy3" secondAttribute="trailing" id="wCu-VQ-SML"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AGV-oP-wrL"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="MTl-42-dy3" id="ihm-mx-WNG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5uj-kN-SMw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="0Dn-07-xQk">
+                    <connections>
+                        <action selector="longPress:" destination="Gti-EM-6i6" id="y8C-Dr-0Dz"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="101" y="164"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ChatRoomInputView" customModule="VideoTimeLine" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="324" height="70"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C4r-qY-g6J">
+                    <rect key="frame" x="8" y="10" width="268" height="50"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7b-QC-TGk">
+                    <rect key="frame" x="286" y="8" width="30" height="54"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="Vhd-wG-khp"/>
+                    </constraints>
+                    <state key="normal" title="➤"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="I7b-QC-TGk" firstAttribute="leading" secondItem="C4r-qY-g6J" secondAttribute="trailing" constant="10" id="6vp-y1-oiR"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="I7b-QC-TGk" secondAttribute="bottom" constant="8" id="88b-Qa-xnB"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="C4r-qY-g6J" secondAttribute="bottom" constant="10" id="CFS-u0-qIl"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="I7b-QC-TGk" secondAttribute="trailing" constant="8" id="FoT-Bx-p6Y"/>
+                <constraint firstItem="I7b-QC-TGk" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="NtU-fH-CcC"/>
+                <constraint firstItem="C4r-qY-g6J" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="O4D-EU-RFx"/>
+                <constraint firstItem="C4r-qY-g6J" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="WTy-Wr-bh4"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="chatTextField" destination="C4r-qY-g6J" id="JwD-EF-Mit"/>
+                <outlet property="sendButton" destination="I7b-QC-TGk" id="btO-hb-cXb"/>
+            </connections>
+        </view>
+    </objects>
+</document>

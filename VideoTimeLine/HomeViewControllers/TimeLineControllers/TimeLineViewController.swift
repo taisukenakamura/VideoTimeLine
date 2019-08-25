@@ -9,36 +9,20 @@
 import UIKit
 import AVFoundation
 import Firebase
-import FirebaseFirestore
-import NextLevel
+
 
 class TimeLineViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate,UIScrollViewDelegate {
     
-    var ref: DatabaseReference!
-    
-    
-    @IBOutlet weak var menuBar: UIView!
-    @IBOutlet weak var pencilButton: UIButton!
-    @IBOutlet weak var videoButton: UIButton!
-    @IBOutlet weak var cameraButton: UIButton!
-    
-    
-    
+   
+    // ごみアニメーションの追加
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var addButton: FloatingActionButton!
-    
     
     // mp4のresourceを配列で格納
-    let resourceList: [String] = ["Owl - 18244", "588171196.615912"]
+    let resourceList: [String] = ["Owl - 18244", "588411524.751567", "Owl - 18244", "Owl - 18244"]
     // refreshControlインスタンス化
     let refreshControl = UIRefreshControl()
     var items = [NSDictionary]()
 
-    // Firestoreのインスタンス化
-    let db = Firestore.firestore()
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
      
@@ -49,39 +33,7 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         refreshControl.attributedTitle = NSAttributedString(string: "更新中")
         // アクションを指定
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
-        // tableViewに追加
-        tableView.addSubview(refreshControl)
         
-        addButton.createFloatingActionButton()
-        
-        closeMenu()
-    }
-    
-  
-    // ＋ボタンを押した際の挙動
-    @IBAction func menuTapped(_ sender: FloatingActionButton) {
-        UIView.animate(withDuration: 0.3, animations: {
-            
-            if self.menuBar.transform == .identity {
-                self.closeMenu()
-            } else {
-                self.menuBar.transform = .identity
-            }
-        })
-        UIView.animate(withDuration: 0.5, delay: 0.2, usingSpringWithDamping:  0.3,initialSpringVelocity: 0,options: [], animations: {
-            if self.menuBar.transform != .identity {
-                self.pencilButton.transform = .identity
-                self.videoButton.transform = .identity
-                self.cameraButton.transform = .identity
-            }
-        })
-    }
-    // メニューバーを閉じる処理
-    func closeMenu() {
-        menuBar.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
-        pencilButton.transform = CGAffineTransform(translationX: 0, y: 15)
-        videoButton.transform = CGAffineTransform(translationX: 11, y: 11)
-        cameraButton.transform = CGAffineTransform(translationX: 15, y: 15)
     }
     
     // 更新
@@ -94,21 +46,6 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         refreshControl.endRefreshing()
     }
     
-    // カメラ・フォトライブラリへの遷移処理
-    func cameraAction(sourceType: UIImagePickerController.SourceType) {
-        // カメラ・フォトライブラリが使用可能かチェック
-        if UIImagePickerController.isSourceTypeAvailable(sourceType) {
-            // インスタンス化
-            let cameraPicker = UIImagePickerController()
-            // ソースタイプの代入
-            cameraPicker.sourceType = sourceType
-            // デリゲートの接続
-            cameraPicker.delegate = self
-            // 画面遷移
-            self.present(cameraPicker, animated: true)
-            
-        }
-    }
     // セルの数
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return resourceList.count
@@ -118,7 +55,10 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableViewCell
         
+        
         cell.playVideo(resourceList[indexPath.row])
+        
+        
     
         return cell
     }
@@ -128,8 +68,8 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
     }
    
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        print("**willDisplay")
-        indexPath.row
+        print("**willDisplay:\(indexPath.row)")
+//        testIndexrow = indexPath.row
         
     }
     
@@ -138,10 +78,9 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         print("**didEndDisplaying")
         
     }
-
+    // ナビゲーションバーを消す
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
-        
+    
         
         if scrollView.panGestureRecognizer.translation(in: scrollView).y < 0 {
             navigationController?.setNavigationBarHidden(true, animated: true)
@@ -150,25 +89,7 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         }
         
     }
-    // カメラを起動
-    @IBAction func opneCamera(_ sender: Any) {
-        cameraAction(sourceType: .camera)
-    }
-    // アルバムを起動
-    @IBAction func openPhotos(_ sender: Any) {
-        cameraAction(sourceType: .photoLibrary)
-    }
-    // プロフィール設定
-    @IBAction func openProfile(_ sender: Any) {
-        let storyboard: UIStoryboard = UIStoryboard(name: "Profile", bundle: nil)
-        // 移動先のvcをインスタンス化(ここの"Main"はStoryboardId。"Main"は起動時に設定されています。)
-        let vc = storyboard.instantiateViewController(withIdentifier: "Edit")
-        // 遷移処理
-        self.present(vc, animated: true)
-        
-    }
     
-  
 }
 
 

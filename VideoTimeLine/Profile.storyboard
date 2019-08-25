@@ -19,86 +19,82 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="E4T-WH-hcI">
-                                <rect key="frame" x="60" y="70" width="200" height="400"/>
+                                <rect key="frame" x="60" y="64" width="200" height="440"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9lB-UI-Rar" customClass="CircleImageView" customModule="VideoTimeLine" customModuleProvider="target">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="人物アイコン (3)" translatesAutoresizingMaskIntoConstraints="NO" id="9lB-UI-Rar" customClass="CircleImageView" customModule="VideoTimeLine" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="AS0-oY-GPo"/>
                                             <constraint firstAttribute="width" secondItem="9lB-UI-Rar" secondAttribute="height" multiplier="1:1" id="FQ2-ln-wpa"/>
                                             <constraint firstAttribute="height" constant="200" id="ajV-gS-22v"/>
                                         </constraints>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vzk-5t-e6I">
-                                        <rect key="frame" x="0.0" y="250" width="200" height="150"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vzk-5t-e6I">
+                                        <rect key="frame" x="0.0" y="250" width="200" height="190"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0VN-0S-JfL">
-                                                <rect key="frame" x="25" y="0.0" width="150" height="30"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="yourName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8qI-qP-3Ma">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="30"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="150" id="AYa-IJ-Cua"/>
+                                                    <constraint firstAttribute="height" constant="30" id="VsQ-IW-1gr"/>
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yNR-6X-kpS">
-                                                <rect key="frame" x="25" y="40" width="150" height="30"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Now Your feeling" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xf8-SJ-8XW">
+                                                <rect key="frame" x="0.0" y="40" width="200" height="30"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="150" id="2lv-Jj-q7o"/>
-                                                    <constraint firstAttribute="height" constant="30" id="ce0-Nr-xYx"/>
+                                                    <constraint firstAttribute="height" constant="30" id="PTF-uX-sA9"/>
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEU-4X-pMl">
-                                                <rect key="frame" x="25" y="80" width="150" height="30"/>
-                                                <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRh-5J-wye">
+                                                <rect key="frame" x="0.0" y="80" width="200" height="50"/>
+                                                <color key="backgroundColor" red="0.78295763949999997" green="0.93214066269999996" blue="0.99825638530000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="Wni-an-LBc"/>
+                                                    <constraint firstAttribute="height" constant="50" id="Lt9-PW-0Os"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="アイコン画像変更"/>
+                                                <state key="normal" title="画像変更"/>
                                                 <connections>
-                                                    <action selector="changeProPhoto:" destination="04y-vm-MbE" eventType="touchUpInside" id="cQx-7W-Skj"/>
+                                                    <action selector="changeProPhoto:" destination="04y-vm-MbE" eventType="touchUpInside" id="KEo-wp-gpx"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVN-dd-6fc">
-                                                <rect key="frame" x="25" y="120" width="150" height="30"/>
-                                                <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wef-JC-BHL">
+                                                <rect key="frame" x="0.0" y="140" width="200" height="50"/>
+                                                <color key="backgroundColor" red="0.78295763949999997" green="0.93214066269999996" blue="0.99825638530000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="TpC-xn-Upq"/>
+                                                </constraints>
                                                 <state key="normal" title="決定"/>
                                                 <connections>
-                                                    <action selector="changeButton:" destination="04y-vm-MbE" eventType="touchUpInside" id="OsF-x1-Shf"/>
+                                                    <action selector="changeButton:" destination="04y-vm-MbE" eventType="touchUpInside" id="8eJ-fe-D7F"/>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="yNR-6X-kpS" firstAttribute="width" secondItem="0VN-0S-JfL" secondAttribute="width" id="1hA-qb-KM5"/>
-                                            <constraint firstItem="IVN-dd-6fc" firstAttribute="width" secondItem="0VN-0S-JfL" secondAttribute="width" id="Awj-fX-lMn"/>
-                                            <constraint firstItem="LEU-4X-pMl" firstAttribute="width" secondItem="0VN-0S-JfL" secondAttribute="width" id="P7E-ID-84M"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.48488646520000001" green="0.65016770960000003" blue="0.90200918910000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.48488646520000001" green="0.79797196059999997" blue="0.90200918910000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="E4T-WH-hcI" firstAttribute="top" secondItem="428-vm-6Nu" secondAttribute="top" constant="50" id="owd-4h-Q4n"/>
+                            <constraint firstItem="E4T-WH-hcI" firstAttribute="centerY" secondItem="uYL-U6-IKT" secondAttribute="centerY" id="3fb-Mu-sNg"/>
                             <constraint firstItem="E4T-WH-hcI" firstAttribute="centerX" secondItem="uYL-U6-IKT" secondAttribute="centerX" id="sA9-05-Ndb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="428-vm-6Nu"/>
                     </view>
                     <connections>
-                        <outlet property="phraseTextField" destination="yNR-6X-kpS" id="ZnH-TY-9FO"/>
+                        <outlet property="phraseTextField" destination="Xf8-SJ-8XW" id="zUU-ko-O94"/>
                         <outlet property="profileImageView" destination="9lB-UI-Rar" id="sNS-fO-pdM"/>
-                        <outlet property="userNameTextField" destination="0VN-0S-JfL" id="rAA-r2-X9D"/>
+                        <outlet property="userNameTextField" destination="8qI-qP-3Ma" id="3WE-ko-COb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gdl-tI-nQ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-120" y="138.38028169014083"/>
+            <point key="canvasLocation" x="-517.5" y="142.6056338028169"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="人物アイコン (3)" width="256" height="256"/>
+    </resources>
 </document>

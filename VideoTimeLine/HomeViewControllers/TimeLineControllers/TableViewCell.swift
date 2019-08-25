@@ -42,14 +42,14 @@ class TableViewCell: UITableViewCell {
         playerLayer.zPosition = -2 // ボタン等よりも後ろに表示
         movieView.layer.insertSublayer(playerLayer, at: 0) // 動画をレイヤーとして追加
         
-        // 動画の上に重ねる半透明の黒いレイヤー
-        let dimOverlay = CALayer()
-        dimOverlay.frame = movieView.bounds
-        dimOverlay.backgroundColor = UIColor.black.cgColor
-        dimOverlay.zPosition = -1
-        dimOverlay.opacity = 0.3 // 不透明度
-        movieView.layer.insertSublayer(dimOverlay, at: 0)
-        
+//        // 動画の上に重ねる半透明の黒いレイヤー
+//        let dimOverlay = CALayer()
+//        dimOverlay.frame = movieView.bounds
+//        dimOverlay.backgroundColor = UIColor.black.cgColor
+//        dimOverlay.zPosition = -1
+//        dimOverlay.opacity = 0.3 // 不透明度
+//        movieView.layer.insertSublayer(dimOverlay, at: 0)
+//
         // 最後まで再生したら最初から再生する
         let playerObserver = NotificationCenter.default.addObserver(
             forName: .AVPlayerItemDidPlayToEndTime,
@@ -61,10 +61,10 @@ class TableViewCell: UITableViewCell {
         
         
         // 端末が回転した時に動画レイヤーのサイズを調整する
-        let boundsObserver = movieView.layer.observe(\.bounds) { [weak playerLayer, weak dimOverlay] view, _ in
+        let boundsObserver = movieView.layer.observe(\.bounds) { [weak playerLayer] view, _ in
             DispatchQueue.main.async {
                 playerLayer?.frame = view.bounds
-                dimOverlay?.frame = view.bounds
+//                dimOverlay?.frame = view.bounds
             }
         }
         

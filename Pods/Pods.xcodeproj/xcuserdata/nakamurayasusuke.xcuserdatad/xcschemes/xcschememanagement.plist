@@ -149,26 +149,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Material-com.cosmicmind.material.fonts.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Material-com.cosmicmind.material.icons.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Material.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Motion.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>NextLevel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -190,11 +170,6 @@
 			<false/>
 		</dict>
 		<key>Protobuf.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>RHSideButtons.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
