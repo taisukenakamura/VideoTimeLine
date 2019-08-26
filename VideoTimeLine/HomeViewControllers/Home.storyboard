@@ -21,9 +21,18 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ahh-ps-ScU">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" placeholder="検索" id="2QF-uQ-O5V">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.78295763949999997" green="0.93214066269999996" blue="0.99825638530000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="Egx-4h-plU" id="fmS-z2-agD"/>
+                                    </connections>
+                                </searchBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendsViewCell" rowHeight="76" id="qbW-D6-KJm">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="76"/>
+                                        <rect key="frame" x="0.0" y="72" width="320" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qbW-D6-KJm" id="Tjy-fO-yJD">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="75.5"/>
@@ -91,10 +100,29 @@
                     </view>
                     <navigationItem key="navigationItem" title="友達" id="jTr-9t-0Bz"/>
                     <connections>
+                        <outlet property="searchBar" destination="2QF-uQ-O5V" id="dRV-WP-D5I"/>
+                        <outlet property="searchDisplayController" destination="pPX-2D-ZMb" id="Dr8-eW-oRi"/>
                         <outlet property="tableView" destination="ahh-ps-ScU" id="sGr-wN-Nw1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="51V-Xv-Dsm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="XIG-uF-aJF">
+                    <connections>
+                        <outlet property="delegate" destination="Egx-4h-plU" id="gPX-nb-uoE"/>
+                        <outlet property="searchContentsController" destination="Egx-4h-plU" id="X4Q-oa-mK0"/>
+                        <outlet property="searchResultsDataSource" destination="Egx-4h-plU" id="IsI-HV-kNb"/>
+                        <outlet property="searchResultsDelegate" destination="Egx-4h-plU" id="mQG-kf-xw7"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="pPX-2D-ZMb">
+                    <connections>
+                        <outlet property="delegate" destination="Egx-4h-plU" id="cod-ZD-x52"/>
+                        <outlet property="searchBar" destination="2QF-uQ-O5V" id="iNb-fg-D5n"/>
+                        <outlet property="searchContentsController" destination="Egx-4h-plU" id="chJ-V1-U7H"/>
+                        <outlet property="searchResultsDataSource" destination="Egx-4h-plU" id="BRr-27-2sZ"/>
+                        <outlet property="searchResultsDelegate" destination="Egx-4h-plU" id="LyF-A6-zCw"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="832.5" y="-785.91549295774644"/>
         </scene>
@@ -162,55 +190,107 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="zo5-Zi-6EJ">
-                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="HR5-S4-PvV">
+                                <rect key="frame" x="0.0" y="64" width="320" height="205"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9u-Xg-Xla">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Upy-zb-Hhe">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="51.5"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="プロフィール編集"/>
                                         <connections>
-                                            <action selector="editAction:" destination="Kgk-MR-IQb" eventType="touchUpInside" id="6d6-09-ahb"/>
+                                            <action selector="editAction:" destination="Kgk-MR-IQb" eventType="touchUpInside" id="Lr3-je-IWC"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fe8-cP-8Yr">
-                                        <rect key="frame" x="0.0" y="91" width="320" height="91"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8V1-uW-BxN">
+                                        <rect key="frame" x="0.0" y="51.5" width="320" height="51"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="アカウント設定"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rU7-EI-ac0">
-                                        <rect key="frame" x="0.0" y="182" width="320" height="91"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1G-Cl-hIH">
+                                        <rect key="frame" x="0.0" y="102.5" width="320" height="51.5"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="詳細設定"/>
+                                        <state key="normal" title="配信履歴"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMP-ac-SPR">
-                                        <rect key="frame" x="0.0" y="273" width="320" height="91"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="投稿履歴"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Yu-NM-hH2">
-                                        <rect key="frame" x="0.0" y="364" width="320" height="91"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lj-ro-eg7">
+                                        <rect key="frame" x="0.0" y="154" width="320" height="51"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="ログアウト"/>
                                         <connections>
-                                            <action selector="LogoutAction:" destination="Kgk-MR-IQb" eventType="touchUpInside" id="s47-Lx-FW2"/>
+                                            <action selector="LogoutAction:" destination="Kgk-MR-IQb" eventType="touchUpInside" id="8UL-lr-qIQ"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0J5-Mw-Heo">
+                                <rect key="frame" x="0.0" y="299" width="320" height="220"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mri-pP-hRR">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="ヘルプ"/>
+                                        <connections>
+                                            <action selector="helpButton:" destination="Kgk-MR-IQb" eventType="touchUpInside" id="2O5-x6-UqS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soy-jb-1Vx">
+                                        <rect key="frame" x="0.0" y="55" width="320" height="55"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="個人データの保護について"/>
+                                        <connections>
+                                            <action selector="dataButton:" destination="Kgk-MR-IQb" eventType="touchUpInside" id="AI6-af-GDc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hb1-yZ-Oc5">
+                                        <rect key="frame" x="0.0" y="110" width="320" height="55"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="利用規約"/>
+                                        <connections>
+                                            <action selector="tosButton:" destination="Kgk-MR-IQb" eventType="touchUpInside" id="zBy-3m-jCm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wz-BS-ex8">
+                                        <rect key="frame" x="0.0" y="165" width="320" height="55"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="プライバシー・ポリシー"/>
+                                        <connections>
+                                            <action selector="privacyButton:" destination="Kgk-MR-IQb" eventType="touchUpInside" id="eF6-fV-bvO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="詳細" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07u-f2-WSr">
+                                <rect key="frame" x="0.0" y="269" width="320" height="30"/>
+                                <color key="backgroundColor" red="0.48488646520000001" green="0.79797196059999997" blue="0.90200918910000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3n1-Po-7pM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="zo5-Zi-6EJ" firstAttribute="leading" secondItem="6LM-4m-LrS" secondAttribute="leading" id="IPf-oD-tkv"/>
-                            <constraint firstItem="zo5-Zi-6EJ" firstAttribute="top" secondItem="6LM-4m-LrS" secondAttribute="top" id="NOm-iG-c6K"/>
-                            <constraint firstItem="zo5-Zi-6EJ" firstAttribute="top" secondItem="6LM-4m-LrS" secondAttribute="top" id="bLT-Sh-vZS"/>
-                            <constraint firstItem="6LM-4m-LrS" firstAttribute="bottom" secondItem="zo5-Zi-6EJ" secondAttribute="bottom" id="ei2-f8-JcZ"/>
-                            <constraint firstItem="6LM-4m-LrS" firstAttribute="trailing" secondItem="zo5-Zi-6EJ" secondAttribute="trailing" id="hEt-TG-wQ7"/>
+                            <constraint firstItem="07u-f2-WSr" firstAttribute="centerY" secondItem="z5j-Sz-kH8" secondAttribute="centerY" id="2HH-dC-wpS"/>
+                            <constraint firstItem="HR5-S4-PvV" firstAttribute="top" secondItem="6LM-4m-LrS" secondAttribute="top" id="BIH-Du-LIO"/>
+                            <constraint firstItem="6LM-4m-LrS" firstAttribute="trailing" secondItem="0J5-Mw-Heo" secondAttribute="trailing" id="SDC-wW-cU3"/>
+                            <constraint firstItem="0J5-Mw-Heo" firstAttribute="leading" secondItem="6LM-4m-LrS" secondAttribute="leading" id="SwA-C3-3wM"/>
+                            <constraint firstItem="HR5-S4-PvV" firstAttribute="leading" secondItem="6LM-4m-LrS" secondAttribute="leading" id="VrR-1U-cPH"/>
+                            <constraint firstItem="0J5-Mw-Heo" firstAttribute="top" secondItem="07u-f2-WSr" secondAttribute="bottom" id="XO0-28-o4N"/>
+                            <constraint firstItem="07u-f2-WSr" firstAttribute="top" secondItem="HR5-S4-PvV" secondAttribute="bottom" id="aoG-pu-uTP"/>
+                            <constraint firstItem="07u-f2-WSr" firstAttribute="leading" secondItem="6LM-4m-LrS" secondAttribute="leading" id="hbD-cU-eBg"/>
+                            <constraint firstItem="6LM-4m-LrS" firstAttribute="trailing" secondItem="07u-f2-WSr" secondAttribute="trailing" id="j5C-3t-dFd"/>
+                            <constraint firstItem="6LM-4m-LrS" firstAttribute="trailing" secondItem="HR5-S4-PvV" secondAttribute="trailing" id="lMK-Ll-xdO"/>
+                            <constraint firstItem="07u-f2-WSr" firstAttribute="centerX" secondItem="z5j-Sz-kH8" secondAttribute="centerX" id="orN-1C-dL8"/>
+                            <constraint firstItem="6LM-4m-LrS" firstAttribute="bottom" secondItem="0J5-Mw-Heo" secondAttribute="bottom" id="v2b-tk-9kZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6LM-4m-LrS"/>
                     </view>
@@ -218,7 +298,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gcr-bz-gR6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="878" y="731"/>
+            <point key="canvasLocation" x="877.5" y="730.9859154929577"/>
         </scene>
         <!--Home Tab Bar Controller-->
         <scene sceneID="jpu-s8-cMF">

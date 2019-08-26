@@ -9,18 +9,21 @@
 import UIKit
 import CoreLocation
 
-class FriendsViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+class FriendsViewController: UIViewController,UITableViewDelegate, UITableViewDataSource,UISearchBarDelegate {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     // 友達ストック
-    var friendsList: [String] = ["佐藤","中村","加藤","鈴木","伊藤","高橋","小野","田中","山本",]
+    var friendsList: [String] = ["Yusuke Ono","Taiga Shiga","Kichi Fukuzawa","Yuta Wanme","Shoutarou Tauchi","Makoto Horita","Masahiro Toyooka","Yu Nagai","Yusaku Kanada",]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // デリゲート接続
         tableView.delegate = self
         tableView.dataSource = self
-        // Do any additional setup after loading the view.
+        
+        searchBar.delegate = self
     }
     // セルの数
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -59,3 +62,4 @@ class FriendsViewController: UIViewController,UITableViewDelegate, UITableViewDa
         
     }
 }
+

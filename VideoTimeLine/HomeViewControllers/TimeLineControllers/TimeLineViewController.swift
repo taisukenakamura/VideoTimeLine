@@ -19,7 +19,7 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
     let resourceList: [String] = ["Owl - 18244", "588411524.751567", "Owl - 18244", "Owl - 18244"]
     // refreshControlインスタンス化
     let refreshControl = UIRefreshControl()
-    var items = [NSDictionary]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,9 +34,7 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
     }
     // 更新
     @objc func refresh() {
-        // 初期化
-        items = [NSDictionary]()
-        
+
         tableView.reloadData()
         // リフレッシュを止める
         refreshControl.endRefreshing()
@@ -58,6 +56,10 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
     // セルの高さ設定
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 340
+    }
+    // セルをタップした際の処理
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
     
     // ナビゲーションバーを消す

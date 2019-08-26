@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Privacy View Controller-->
+        <scene sceneID="gLE-2i-ql2">
+            <objects>
+                <viewController storyboardIdentifier="Privacy" id="1zA-e9-3Dt" customClass="PrivacyViewController" customModule="VideoTimeLine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fd5-18-yhg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ipm-hV-CR5">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="backgroundColor" red="0.78295763949999997" green="0.93214066269999996" blue="0.99825638530000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <items>
+                                    <navigationItem title="プライバシー・ポリシー" id="1Bb-XL-nAJ">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="eOl-Gk-x3V">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3Sb-8s-hWX">
+                                                <rect key="frame" x="20" y="7" width="92" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="←"/>
+                                                <connections>
+                                                    <action selector="backButton:" destination="1zA-e9-3Dt" eventType="touchUpInside" id="VrS-Gy-i4g"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ntm-1W-qix">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">私たちLOOK（以下、「当社」といいます）は、当社が提供するLOOKサービスにおける利用者に関する情報（サービスをご利用いただくお客様に関する全ての情報を指し、以下、「利用者情報」といいます）を以下の通り取り扱います。
+
+適用範囲
+本プライバシーポリシーはLINEに関する全てのサービス（以下、「本サービス」といいます）に適用されます。サービス別のプライバシーポリシーまたは利用規約等（以下、「個別規約」といいます）において個別に利用者情報の取り扱いを規定する場合は、個別規約も適用されます。本プライバシーポリシーと個別規約において矛盾が発生する場合は個別規約が優先されます。
+なお、「他社モジュールの設置について」等に記載される他事業者等による利用者情報の収集は、本プライバシーポリシーの適用範囲ではございません。また、本プライバシーポリシーは日本で本サービスをご利用のお客様に適用されます。日本以外でご利用のお客様はこちらをご覧ください。
+
+取得する利用者情報及び利用方法
+当社は本サービスにおいて次のように利用者情報を取得及び利用いたします。
+
+ご提供いただく情報
+お客様が本サービスをご利用いただくに当たり、以下情報のご提供をお願いする場合があります。ご提供はお客様の任意ですが、ご提供いただけない場合、本サービスまたは本サービスの一部をご利用いただけない場合がございます。
+
+•アカウント登録情報
+お客様が本サービスをご利用開始いただく際、電話番号、メールアドレス、FacebookID等をご登録いただく場合がございます。これらの情報は利用者による本サービスへのログイン、アカウントの引継ぎ等、本サービス上における利用者識別等に利用いたします。 
+
+•アドレス帳
+お客様が友だち自動追加機能をご利用の場合、端末のアドレス帳を取得する場合がございます。アドレス帳からは電話番号と、フィーチャーフォンをご利用の場合に限り携帯電話用メールアドレスを取得いたします。アドレス帳に登録されている氏名、写真、住所、携帯電話用以外のメールアドレス等の情報は取得いたしません。これらの情報は知り合いまたは知り合いの可能性がある他の利用者を探して友だちとして登録または推薦するため、及び不正利用防止のためにのみ利用いたします。
+
+•プロフィール情報
+本サービスの円滑利用やお客様間で円滑にコミュニケーションを行っていただく等の目的で、プロフィール情報（本サービス上での表示名、アイコン画像、ステータスメッセージ、氏名、生年月日等）をご登録いただく場合がございます。生年月日など一部の非公開設定が可能な項目を除き、プロフィール情報は本サービス上や本サービスをご利用される他のお客様（公式アカウントを運用する企業等の第三者を含みます）も閲覧することができます。
+
+ •キャンペーン等で取得する情報
+アンケートやキャンペーン及びそれらに関わる抽選及び賞品発送、ご購入商品の発送等の目的で、氏名、住所、電話番号、メールアドレス、性別、生年月日等を取得する場合がございます。
+
+•お問い合わせ
+電話番号、メールアドレス、端末機種名、OS情報等を取得しております。これらの情報はお問い合わせに対する調査、返答、及びご本人確認等のために利用いたします。
+
+•お支払い情報
+商品購入や有料サービス利用時等、お客様にご利用代金をお支払いいただくためにクレジットカード情報等の入力を求める場合がございます。ただし、決済は決済代行会社が行うため、当社はクレジットカード情報を保有いたしません。
+
+サービス利用情報
+•クッキー（Cookie） 
+ユーザーの設定内容の保存等お客様の利便性向上のため、セッションの維持及び保護等セキュリティのため、広告の効果を計測したりより関心の強いご案内をご提供するため、お客様が利用した本サービスに対する訪問回数及び利用形態、お客様の規模等の把握により、より良いサービスを提供するためにクッキーを利用いたします。また、本サービスではGoogle Analyticsを利用する場合がございます。 お客様はクッキーの使用可否を選択できますが、クッキーの保存を拒む場合にはログインが必要なサービス等、本サービスの一部をご利用いただけない場合がございます。
+
+•アクセスログ
+お客様が本サービスを利用した際にIP アドレス、ブラウザ種類、ブラウザ言語等の情報が自動で生成、保存されます。また、これらの情報は利用者環境を分析し、より良いサービス提供のため、また正常なサービス提供を妨害する不正行為防止のために利用いたします。
+
+•サービス利用状況に関する情報
+本サービスでは、お客様へのサービス提供のためお客様が本サービスを通じて行った利用状況に関する情報を自動的に取得することがあります。 例えば、お客様自身が他の利用者とコミュニケーションのためにテキスト、画像・動画、スタンプなどの情報（以下「コンテンツ」と言います。）を送信、投稿することができますが、これらの情報はシステム上当社サーバーを経由して送信され、この際、コンテンツの送信相手やデータ形式、操作日時等もサーバー上に一時的に記録されます。また、記録される内容には本サービス上でタップ・クリックによってアクセスしたURL情報などが含まれる場合があります。
+
+なお、これらの情報の内、お客様間でやり取りされる非公開のコンテンツに関する内容等については、お客様の同意等が無い限り当社は閲覧・利用することはありません。詳細はこちらをご参照ください。
+
+•位置情報
+お客様に位置情報を使ったサービスや最適なサービスを提供する等の目的で、本サービスの一部では、携帯電話等から送信される位置情報を利用しております。なお、携帯電話等の設定で位置情報の送信を許可していない場合は、位置情報は送信されません。
+
+•機器情報
+お客様が利用される機器情報（OS、端末の個体識別情報、コンピュータ名、広告ID、言語設定等）を取得する場合がございます。また、取得した広告IDを当社がお客様に付与した内部識別子に紐付ける場合がございます。これらの情報はより良いサービス提供のため、またご本人確認や正常なサービス提供を妨害する不正行為防止のために利用いたします。
+
+•プラグイン機能を設置するサイトやアプリからの情報 
+「LOOKで送る」等のプラグイン機能が設置された当社及び第三者のウェブサイトやアプリにおけるプラグインからのログイン記録の他、ブラウザ上でLOOKにログインした状態で訪問したプラグイン機能が設置されたウェブサイトのURLを取得する場合がございます。なお、LINEからログアウトした状態では、これらの情報は取得されません。 
+
+•第三者が運営するサービスのご利用に係る情報
+当社は、お客様への最適なサービス提供のために、第三者から利用者情報を受領する場合があります。受領に際して、独自サービスを運営する提携事業者から利用者情報を受領する場合と、公式アカウントやLOOKログイン等の本サービスと連携したサービスを運営する提携事業者から利用者情報を受領する場合がございます。また、お客様が第三者と連携したサービスをご利用される場合、当社はお客様の利用者情報と当該サービスを紐付けるための内部識別子を自動的に発行し、当該第三者と共有することがあります。 
+
+•Appleが提供するTrue Depth APIの利用に関する情報
+当社は、本サービスで提供するカメラや映像通話の品質向上やエフェクトなどの機能向上の目的のために、Apple社のTrueDepthカメラ機能を利用し、カメラから得られる付加的な情報を取得する場合があります。ただし、これらの情報はこれらの目的にかかるリアルタイムでの処理を行うためにのみ使用されます。
+この情報がサーバーに保存されたり、第三者と共有されることはありません。 
+
+利用者情報の利用目的
+当社は取得した利用者情報を以下の目的で利用いたします。なお、アドレス帳のように取得時に利用目的を限定した場合は、その範囲内でのみ利用いたします。
+
+・当社サービスの提供・改善・開発のため
+　・お客様が本サービスを円滑に利用できるようにするため
+　・お客様が知り合いまたは知り合いの可能性がある他の利用者を探して友だちとして登録または推薦するため
+　・当社サービス利用に関する統計データを作成し改善につなげるため 
+　・お客様からのお問い合わせに対する対応のため 
+　・現在提供している本サービスまたは今後提供を検討している当社サービスに関するアンケート実施のため
+　・今後の当社サービスに関する新企画立案を行い提供するため
+　・キャンペーン等の抽選及び賞品や商品発送のため
+　・商品購入時や有料サービス利用時等におけるご請求処理のため
+　・その他当社サービスに関する重要なお知らせ等、必要に応じた連絡を行うため
+・当社サービスのセキュリティ、不正利用防止のため
+　・スパム行為や不正アクセス等、不正利用防止のため
+　・不正利用が発生した場合などに本人確認や連絡を行うため
+・パーソナライズ、広告配信のため
+　・当社サービス及びLINEグループ会社に関する情報等または当社以外の事業者が広告主となる広告情報等を告知するため
+　・利用者個人にカスタマイズされた当社サービス提供のため
+
+
+利用者情報の第三者提供
+当社は、法令で認められる場合を除いて、利用者情報をお客様の同意なく第三者に提供することはございません。ただし、以下の場合は例外とします。
+
+ •お客様が第三者と連携したサービスをご利用される場合など、提携事業者による利用者識別のための必要最低限の情報を提供する場合
+
+この場合、当社は必要最低限の情報（内部識別子、機器情報の一部（広告ID・言語設定等）、属性情報）のみを第三者に提供し、氏名や住所、電話番号等の提供にあたってはあらためてお客様の意思確認を行います。なお、提供先には外国の法人も含まれる場合があります。 また、上記に関してはそれぞれ「取得される情報及び利用方法＞サービス利用情報＞第三者が運営するサービスのご利用に係る情報」「広告について」もご参照ください。
+
+利用者情報の委託
+当社は利用目的の達成に必要な範囲内においてお客様から取得した利用者情報の全部または一部を業務委託先（外国にある委託先を含みます）に委託することがございます。その際、業務委託先としての適格性を十分審査するとともに、契約にあたって守秘義務に関する事項等を規定し、情報が適正に管理される体制作りを行います。
+
+利用者情報の共同利用
+当社は、利用目的の達成に必要な範囲で、利用者情報を当社グループ会社（子会社または関連会社をいい、定義は「財務諸表等の用語、様式及び作成方法に関する規則」に従い、外国にある子会社、関連会社も含まれます）と共同利用いたします。
+
+・共同利用される利用者情報は、上記の「取得する利用者情報及び利用方法」に記載された項目と同じです。 
+・共同利用の目的は、上記の「利用者情報の利用目的」に記載された利用目的と同じです（但し、共同利用の利用目的については、「当社」を「当社グループ」と、また、「本サービス」を「当社グループの提供するサービス」と読み替えるものとします）。
+・共同利用における管理責任者は、当社となります。お問い合わせについては、お問い合わせフォームよりお問い合わせください。 
+
+他社モジュールの設置について
+当社は、他社媒体に掲載した本サービスの広告の費用を広告代理店に支払う目的で広告掲載効果を測定するため、または利用状況の分析等のために他社モジュールを本サービスのスマートフォン用アプリに設置する場合がございます。設置対象アプリ等の詳細はこちらでご確認いただけます。 
+
+広告について
+当社は、個々のお客様のニーズにあった最適な広告を配信できるよう取り組んでいます。 一方、サービスの特性上プライバシーに十分配慮し、お客様に安心してご利用いただける環境を提供することが重要と考え、お客様の利便性とプライバシーのバランスを考慮して広告配信において実施しない事項を定めております。また、お客様の情報に基づき最適化された広告の配信は、いつでもお客様自身が停止/再開を選択することが可能です。 広告の最適化において実施しない事項や、停止/再開の方法、その他広告の最適化に関する詳細はこちらにてご確認いただけます。 
+
+利用者の権利
+お客様はいつでもご登録されているメールアドレスやパスワード等の情報を、本サービスサイト上で確認、訂正することができます。また、アカウントを削除することができます。その他LINEの設定画面における「プライバシー管理」や「アカウント」から情報の公開や利用設定等を変更することも出来ます。 
+
+お客様は当社に対し、サービス上で確認できない個人情報の開示や利用目的の通知を求める場合、当社が別途定めた手続きに従って、次の場合を除き開示等を請求することができます。 
+
+・開示することで本人または第三者の生命、身体、財産その他の権利利益を害するおそれがある場合 
+・開示することで当社の業務の適正な実施に著しい支障を及ぼすおそれがある場合 
+・開示することが法令に違反することとなる場合
+・開示の請求がご本人からであることが確認できない場合
+
+
+開示の結果、当社保有の個人情報の内容が事実でないとお客様が判断した場合は、当社が別途定めた手続きに従って、個人情報の訂正・追加・削除を請求することができます。その場合、当社は利用目的の達成に必要な範囲内で遅滞なく調査を行い、その結果に基づき当該個人情報の訂正・追加・削除を行います。 
+
+なお、サービスサイト上で確認できない個人情報の開示を請求される場合には、当社が別途定めた手続きに従って開示手数料をいただく場合がございます。 
+
+お客様から当社への個人情報の提供は任意ですが、必要な情報をご提供いただけない場合、本サービスの一部を利用できない場合がございます。 
+
+退会者の情報
+本サービスのアカウントを削除した場合、利用者情報は関連法規及び社内規定に従って適切に処理いたします。 
+
+お子様の利用者情報について 
+15歳未満のお客様が本サービスを利用し、利用者情報を入力される場合には保護者の方の同意のもとに行っていただけますようお願いいたします。 
+
+本プライバシーポリシーの改定
+本プライバシーポリシーは改定されることがあります。重要な変更にあたってはお客様に対してわかりやすい方法にて改定内容を告知いたします。 
+
+お問い合わせ
+本プライバシーポリシーに関してご不明な点がある場合、本サービスにおける利用者情報の取り扱いに関するご質問・苦情・ご相談等があります場合はお問い合わせフォームよりご連絡ください。 </mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Y8d-0X-GJM" firstAttribute="bottom" secondItem="Ntm-1W-qix" secondAttribute="bottom" id="ODF-im-M8q"/>
+                            <constraint firstItem="Ipm-hV-CR5" firstAttribute="leading" secondItem="Y8d-0X-GJM" secondAttribute="leading" id="aJ0-Id-LLB"/>
+                            <constraint firstItem="Ntm-1W-qix" firstAttribute="leading" secondItem="Y8d-0X-GJM" secondAttribute="leading" id="gFo-tQ-GK7"/>
+                            <constraint firstItem="Y8d-0X-GJM" firstAttribute="trailing" secondItem="Ntm-1W-qix" secondAttribute="trailing" id="lht-EY-h36"/>
+                            <constraint firstItem="Ipm-hV-CR5" firstAttribute="trailing" secondItem="Y8d-0X-GJM" secondAttribute="trailing" id="mt9-hK-rdL"/>
+                            <constraint firstItem="Ipm-hV-CR5" firstAttribute="top" secondItem="Y8d-0X-GJM" secondAttribute="top" id="q7s-OZ-fg6"/>
+                            <constraint firstItem="Ntm-1W-qix" firstAttribute="top" secondItem="Ipm-hV-CR5" secondAttribute="bottom" id="yAC-i0-ZKQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Y8d-0X-GJM"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nGB-Mt-50E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-9" y="141"/>
+        </scene>
+    </scenes>
+</document>
