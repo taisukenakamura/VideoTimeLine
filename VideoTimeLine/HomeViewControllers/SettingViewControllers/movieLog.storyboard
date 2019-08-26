@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Movie Log View Controller-->
+        <scene sceneID="Gjf-4f-O70">
+            <objects>
+                <viewController storyboardIdentifier="movieLog" id="YoC-G9-S2i" customClass="movieLogViewController" customModule="VideoTimeLine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eM9-LH-kKy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="配信履歴" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R0s-jl-lVF">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <color key="backgroundColor" red="0.78295763949999997" green="0.93214066269999996" blue="0.99825638530000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="GY6-g4-VHG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlB-HS-Kkh">
+                                <rect key="frame" x="0.0" y="44" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6sY-tg-MxL"/>
+                                    <constraint firstAttribute="width" constant="50" id="iQJ-dr-VFP"/>
+                                </constraints>
+                                <state key="normal" title="←"/>
+                                <connections>
+                                    <action selector="backButton:" destination="YoC-G9-S2i" eventType="touchUpInside" id="4zs-Tj-9yq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたはまだ配信していません" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azT-Ge-SXM">
+                                <rect key="frame" x="85.5" y="430.5" width="243" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="h9V-71-QJN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="R0s-jl-lVF" firstAttribute="top" secondItem="gbk-rt-5wJ" secondAttribute="top" id="5og-YN-UBK"/>
+                            <constraint firstItem="azT-Ge-SXM" firstAttribute="centerX" secondItem="eM9-LH-kKy" secondAttribute="centerX" id="cl7-sk-Emr"/>
+                            <constraint firstItem="R0s-jl-lVF" firstAttribute="leading" secondItem="gbk-rt-5wJ" secondAttribute="leading" id="egU-fL-rUV"/>
+                            <constraint firstItem="dlB-HS-Kkh" firstAttribute="top" secondItem="gbk-rt-5wJ" secondAttribute="top" id="erD-RP-8YU"/>
+                            <constraint firstItem="gbk-rt-5wJ" firstAttribute="trailing" secondItem="R0s-jl-lVF" secondAttribute="trailing" id="hjQ-E4-TGj"/>
+                            <constraint firstItem="dlB-HS-Kkh" firstAttribute="leading" secondItem="gbk-rt-5wJ" secondAttribute="leading" id="wqc-ih-sUs"/>
+                            <constraint firstItem="azT-Ge-SXM" firstAttribute="centerY" secondItem="eM9-LH-kKy" secondAttribute="centerY" id="xr2-IC-DEL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gbk-rt-5wJ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uUf-Gr-nDk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="42" y="87"/>
+        </scene>
+    </scenes>
+</document>

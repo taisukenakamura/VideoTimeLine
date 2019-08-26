@@ -25,6 +25,7 @@ class ViewController: UIViewController, FUIAuthDelegate {
         FUIGoogleAuth(),
         FUIPhoneAuth(authUI:FUIAuth.defaultAuthUI()!)
     ]
+    private var observers: (player: NSObjectProtocol,bounds: NSKeyValueObservation)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,7 +63,24 @@ class ViewController: UIViewController, FUIAuthDelegate {
                 playerLayer?.player?.play()
                 
         }
+     
+        // 端末が回転した時に動画レイヤーのサイズを調整する
+        let boundsObserver = view.layer.observe(\.bounds) { [weak playerLayer, weak dimOverlay] view, _ in
+            DispatchQueue.main.async {
+                playerLayer?.frame = view.bounds
+                dimOverlay?.frame = view.bounds
+            }
+        }
+        observers = (playerObserver,boundsObserver)
     }
+    deinit {
+        // 画面が破棄された時に監視をやめる
+        if let observers = observers {
+            NotificationCenter.default.removeObserver(observers.player)
+            observers.bounds.invalidate()
+        }
+    
+}
     // ボタンをタップした際の挙動
     @objc func AuthButtonTapped(sender : AnyObject) {
         // FirebaseUIのViewの取得

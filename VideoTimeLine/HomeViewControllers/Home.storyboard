@@ -147,7 +147,7 @@
                                             <subviews>
                                                 <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tpj-Vg-1Dz">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="252.5"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <gestureRecognizers/>
                                                 </view>
                                             </subviews>
                                             <constraints>
@@ -213,6 +213,9 @@
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="配信履歴"/>
+                                        <connections>
+                                            <action selector="logButton:" destination="Kgk-MR-IQb" eventType="touchUpInside" id="RAO-2h-5pF"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lj-ro-eg7">
                                         <rect key="frame" x="0.0" y="154" width="320" height="51"/>

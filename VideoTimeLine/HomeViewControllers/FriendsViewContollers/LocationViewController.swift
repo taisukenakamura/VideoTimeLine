@@ -41,20 +41,15 @@ class LocationViewController: UIViewController {
         }
         //インスタンス化
         pinByLongPress = MKPointAnnotation()
-        
         //ロングタップから位置情報を取得
         let location:CGPoint = sender.location(in: mapView)
-        
         //取得した位置情報をCLLocationCoordinate2D（座標）に変換
         let longPressedCoordinate: CLLocationCoordinate2D = mapView.convert(location, toCoordinateFrom: mapView)
         print("longPressedCoordinate:\(longPressedCoordinate)")
-        
         //ロングタップした位置の座標をピンに入力
         pinByLongPress.coordinate = longPressedCoordinate
-        
         //ピンを追加する（立てる）
         mapView.addAnnotation(pinByLongPress)
-        
         // 保存
         firebaseSave(location: longPressedCoordinate)
         

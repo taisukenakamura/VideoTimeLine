@@ -22,6 +22,15 @@ class SettingViewController: UIViewController {
         // 遷移処理
         self.present(vc, animated: true)
     }
+    // 配信履歴ボタン
+    @IBAction func logButton(_ sender: Any) {
+        // storyboardのfileの特定
+        let storyboard: UIStoryboard = UIStoryboard(name: "movieLog", bundle: nil)
+        // 移動先のvcをインスタンス化
+        let vc = storyboard.instantiateViewController(withIdentifier: "movieLog")
+        // 遷移処理
+        self.present(vc, animated: true)
+    }
     // ログアウト
     @IBAction func LogoutAction(_ sender: Any) {
         

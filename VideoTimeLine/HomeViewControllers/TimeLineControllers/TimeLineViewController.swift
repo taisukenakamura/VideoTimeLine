@@ -11,7 +11,7 @@ import AVFoundation
 import Firebase
 
 
-class TimeLineViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate,UIScrollViewDelegate {
+class TimeLineViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate,UIScrollViewDelegate,UIGestureRecognizerDelegate {
     
     // tableViewの接続
     @IBOutlet weak var tableView: UITableView!
@@ -20,17 +20,22 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
     // refreshControlインスタンス化
     let refreshControl = UIRefreshControl()
     
+    var detailViewController = DetailViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // tableViewデリゲート接続
         tableView.delegate = self
         tableView.dataSource = self
+        // UILongPressGestureRecognizer宣言 デリゲート接続
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(longPress(_:)))
+        longPressGesture.delegate = self
         //テキストを追加
         refreshControl.attributedTitle = NSAttributedString(string: "更新中")
         // アクションを指定
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
-        
+        // tableViewにrecognizerを設定
+        tableView.addGestureRecognizer(longPressGesture)
     }
     // 更新
     @objc func refresh() {
@@ -57,9 +62,21 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 340
     }
-    // セルをタップした際の処理
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    // 長押しした際に呼ばれるメソッド
+    @objc func longPress(_ recognizer: UILongPressGestureRecognizer) {
+        print("*****************")
+        // 押された位置でcellのPathを取得
+        let point = recognizer.location(in: tableView)
+        let indexPath = tableView.indexPathForRow(at: point)
         
+        if recognizer.state == UIGestureRecognizer.State.began {
+             // 長押しされた場合の処理
+            print("長押しされたcellのindexPath:\(indexPath?.row)")
+            view.addSubview(detailViewController.view)
+            
+        } else if recognizer.state == UIGestureRecognizer.State.ended  {
+            
+        }
     }
     
     // ナビゲーションバーを消す

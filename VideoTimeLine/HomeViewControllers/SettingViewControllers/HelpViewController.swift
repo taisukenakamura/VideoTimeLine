@@ -27,11 +27,13 @@ class HelpViewController: UIViewController {
         let use = UIAlertAction(title: "スパムまたは不正利用", style: .default)
         let problem = UIAlertAction(title: "機能の問題", style: .default)
         let feedBack = UIAlertAction(title: "フィードバック", style: .default)
+        let video = UIAlertAction(title: "動画の画質の問題について", style: .default)
         let close = UIAlertAction(title: "キャンセル", style: .cancel)
         
         alert.addAction(use)
         alert.addAction(problem)
         alert.addAction(feedBack)
+        alert.addAction(video)
         alert.addAction(close)
         
         present(alert, animated: true)
