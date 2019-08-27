@@ -13,8 +13,9 @@
 		781D4DB92313A59000481488 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 781D4DB82313A59000481488 /* Home.storyboard */; };
 		781D4DBF2313B18500481488 /* movieLog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 781D4DBE2313B18500481488 /* movieLog.storyboard */; };
 		781D4DC12313B20800481488 /* movieLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781D4DC02313B20800481488 /* movieLogViewController.swift */; };
-		781D4DC72313CB4C00481488 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 781D4DC62313CB4C00481488 /* Detail.storyboard */; };
-		781D4DC92313CB6A00481488 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781D4DC82313CB6A00481488 /* DetailViewController.swift */; };
+		781D4DCB2313E19E00481488 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781D4DCA2313E19E00481488 /* DetailViewController.swift */; };
+		781D4DCD2313E22000481488 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 781D4DCC2313E22000481488 /* Detail.storyboard */; };
+		781D4E172315072500481488 /* AVFoundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781D4E162315072500481488 /* AVFoundation.swift */; };
 		7855AE932312731D00A1ADAE /* 588411524.751567.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7855AE922312731B00A1ADAE /* 588411524.751567.mp4 */; };
 		785D0243230A4794003545B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785D0242230A4794003545B9 /* AppDelegate.swift */; };
 		785D0245230A4794003545B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785D0244230A4794003545B9 /* ViewController.swift */; };
@@ -77,8 +78,9 @@
 		781D4DB82313A59000481488 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		781D4DBE2313B18500481488 /* movieLog.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = movieLog.storyboard; sourceTree = "<group>"; };
 		781D4DC02313B20800481488 /* movieLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = movieLogViewController.swift; sourceTree = "<group>"; };
-		781D4DC62313CB4C00481488 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
-		781D4DC82313CB6A00481488 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		781D4DCA2313E19E00481488 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		781D4DCC2313E22000481488 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		781D4E162315072500481488 /* AVFoundation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVFoundation.swift; sourceTree = "<group>"; };
 		7855AE922312731B00A1ADAE /* 588411524.751567.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 588411524.751567.mp4; sourceTree = "<group>"; };
 		785D023F230A4794003545B9 /* VideoTimeLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoTimeLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		785D0242230A4794003545B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				785D0242230A4794003545B9 /* AppDelegate.swift */,
 				78916E11230E20D3003A1510 /* CircleImage.swift */,
 				78F4FE37230B856F00510537 /* HomeTabBarController.swift */,
+				781D4E162315072500481488 /* AVFoundation.swift */,
 				785D0246230A4794003545B9 /* Main.storyboard */,
 				785D0276230A64EB003545B9 /* FirstViewControllers */,
 				78F4FE31230B818300510537 /* HomeViewControllers */,
@@ -237,8 +240,8 @@
 			children = (
 				78F4FE45230BD47300510537 /* TimeLineViewController.swift */,
 				78916E19230EB443003A1510 /* TableViewCell.swift */,
-				781D4DC62313CB4C00481488 /* Detail.storyboard */,
-				781D4DC82313CB6A00481488 /* DetailViewController.swift */,
+				781D4DCA2313E19E00481488 /* DetailViewController.swift */,
+				781D4DCC2313E22000481488 /* Detail.storyboard */,
 			);
 			path = TimeLineControllers;
 			sourceTree = "<group>";
@@ -410,7 +413,7 @@
 				78198E3D230FA6ED00505B7E /* Location.storyboard in Resources */,
 				789B07B1230AC8FC00D938DA /* Owl - 18244.mp4 in Resources */,
 				78916E10230E1A58003A1510 /* Profile.storyboard in Resources */,
-				781D4DC72313CB4C00481488 /* Detail.storyboard in Resources */,
+				781D4DCD2313E22000481488 /* Detail.storyboard in Resources */,
 				781D4DBF2313B18500481488 /* movieLog.storyboard in Resources */,
 				78DFEEDB231370E9005A9031 /* Data.storyboard in Resources */,
 				785D024D230A4796003545B9 /* LaunchScreen.storyboard in Resources */,
@@ -561,7 +564,7 @@
 				78F4FE38230B857000510537 /* HomeTabBarController.swift in Sources */,
 				78F4FE46230BD47300510537 /* TimeLineViewController.swift in Sources */,
 				78916E14230E2538003A1510 /* EditViewController.swift in Sources */,
-				781D4DC92313CB6A00481488 /* DetailViewController.swift in Sources */,
+				781D4DCB2313E19E00481488 /* DetailViewController.swift in Sources */,
 				78F4FE48230BD58F00510537 /* SettingViewController.swift in Sources */,
 				78F4FE44230BD36A00510537 /* FriendsViewController.swift in Sources */,
 				785D027E230A93AD003545B9 /* SignUpViewController.swift in Sources */,
@@ -570,6 +573,7 @@
 				78DFEEE5231386DC005A9031 /* TosViewController.swift in Sources */,
 				785D0243230A4794003545B9 /* AppDelegate.swift in Sources */,
 				78198E3B230FA61400505B7E /* LocationViewController.swift in Sources */,
+				781D4E172315072500481488 /* AVFoundation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,7 +15,7 @@ class TosViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
+    // 戻る
     @IBAction func backButton(_ sender: Any) {
         
         self.dismiss(animated: true, completion: nil)

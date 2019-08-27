@@ -15,14 +15,14 @@ class HelpViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
+    // 戻る
     @IBAction func backButton(_ sender: Any) {
         
       self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func problemButon(_ sender: Any) {
-        
+        // アラート機能
         let alert = UIAlertController(title: "問題を報告", message: nil, preferredStyle: .alert)
         let use = UIAlertAction(title: "スパムまたは不正利用", style: .default)
         let problem = UIAlertAction(title: "機能の問題", style: .default)

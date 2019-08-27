@@ -13,38 +13,48 @@ import Firebase
 
 class TimeLineViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate,UIScrollViewDelegate,UIGestureRecognizerDelegate {
     
+    var observers: (player: NSObjectProtocol,
+    bounds: NSKeyValueObservation)?
+    
     // tableViewの接続
     @IBOutlet weak var tableView: UITableView!
     // mp4のresourceを配列で格納
-    let resourceList: [String] = ["Owl - 18244", "588411524.751567", "Owl - 18244", "Owl - 18244"]
+    let resourceList: [String] = ["Owl - 18244","588411524.751567", "Owl - 18244", "Owl - 18244"]
     // refreshControlインスタンス化
     let refreshControl = UIRefreshControl()
-    
-    var detailViewController = DetailViewController()
-    
+    /// AVプレイヤー情報
+    var player = AVPlayer()
+    /// 再生したか否か
+    var isPlay: Bool = false
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         // tableViewデリゲート接続
         tableView.delegate = self
         tableView.dataSource = self
-        // UILongPressGestureRecognizer宣言 デリゲート接続
-        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(longPress(_:)))
+        
+        //ロングプレス
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(TimeLineViewController.longPress(_:)))
+        
         longPressGesture.delegate = self
+        //Viewに追加
+        self.view.addGestureRecognizer(longPressGesture)
+        
         //テキストを追加
         refreshControl.attributedTitle = NSAttributedString(string: "更新中")
         // アクションを指定
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
-        // tableViewにrecognizerを設定
-        tableView.addGestureRecognizer(longPressGesture)
+        
     }
     // 更新
     @objc func refresh() {
-
+        
         tableView.reloadData()
         // リフレッシュを止める
         refreshControl.endRefreshing()
     }
     
+    // セルの設定 ========================================================================
     // セルの数
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return resourceList.count
@@ -56,36 +66,39 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         // セルにビデオを流す
         cell.playVideo(resourceList[indexPath.row])
         
+        
         return cell
     }
     // セルの高さ設定
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 340
     }
-    // 長押しした際に呼ばれるメソッド
-    @objc func longPress(_ recognizer: UILongPressGestureRecognizer) {
-        print("*****************")
-        // 押された位置でcellのPathを取得
-        let point = recognizer.location(in: tableView)
-        let indexPath = tableView.indexPathForRow(at: point)
-        
-        if recognizer.state == UIGestureRecognizer.State.began {
-             // 長押しされた場合の処理
-            print("長押しされたcellのindexPath:\(indexPath?.row)")
-            view.addSubview(detailViewController.view)
-            
-        } else if recognizer.state == UIGestureRecognizer.State.ended  {
-            
-        }
-    }
     
-    // ナビゲーションバーを消す
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    // =========================================================================
+    //longpressイベント
+    @objc func longPress(_ sender: UILongPressGestureRecognizer) {
         
-        if scrollView.panGestureRecognizer.translation(in: scrollView).y < 0 {
-            navigationController?.setNavigationBarHidden(true, animated: true)
-        } else {
-            navigationController?.setNavigationBarHidden(false, animated: true)
+        print("*****************")
+        let storyboard: UIStoryboard = UIStoryboard(name: "Detail", bundle: nil)
+        let vc: DetailViewController = storyboard.instantiateViewController(withIdentifier: "Detail") as! DetailViewController
+        
+        //送信者の状態が　タッチ開始時にlongが認識される
+        if sender.state == .began{
+            //開始は認知される
+            print("Long Press began")
+            // 押された位置でcellのPathを取得
+            let point = sender.location(in: tableView)
+            var indexPath = tableView.indexPathForRow(at: point)
+            let selectedVideo = resourceList[(indexPath?.row)!]
+            print("長押しされたcellのindexPath:\(indexPath?.row)")
+            vc.selectedVideo = selectedVideo
+            
+            present(vc, animated: true)
+        }
+        else if sender.state == .ended {
+            
         }
     }
 }
+
+

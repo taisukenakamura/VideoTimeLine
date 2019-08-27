@@ -7,43 +7,22 @@
 //
 
 import UIKit
+import AVFoundation
 
 class DetailViewController: UIViewController {
-
+    // 初期値
+    var selectedVideo: String = ""
+    // 映像を流す
+    @IBOutlet weak var movieView: UIView!
+    
+    var observers: (player: NSObjectProtocol,
+    bounds: NSKeyValueObservation)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let screenWidth:CGFloat = self.view.frame.width
-        let screenHeight:CGFloat = self.view.frame.height
-        
-        let popupWidth = (screenWidth * 3)/4
-        let popupHeight = (screenWidth * 4)/5
-        
-        // uiviewの作成　ポップアップ
-        let testUIView = UIView()
-        testUIView.frame = CGRect(
-            x:screenWidth/8,
-            y:screenHeight/3,
-            width:popupWidth,
-            height:popupHeight
-        )
-        testUIView.backgroundColor = UIColor.white
-        testUIView.layer.cornerRadius = 10
-        
-        self.view.addSubview(testUIView)
-        
-        // 画面のどこかがタップされたらポップアップを消す処理
-        let tapGesture:UITapGestureRecognizer = UITapGestureRecognizer(
-            target: self,
-            action: #selector(self.tapped(_:))
-        )
-        
-        // デリゲートをセット
-        tapGesture.delegate = self as? UIGestureRecognizerDelegate
-        
-        self.view.addGestureRecognizer(tapGesture)
-        
-        // ポップアップ以外のところを半透明のグレーに。
+        // 再生
+        playVideo(selectedVideo)
+        // 背景色
         self.view.backgroundColor = UIColor(
             red: 150/255,
             green: 150/255,
@@ -51,9 +30,60 @@ class DetailViewController: UIViewController {
             alpha: 0.6
         )
     }
+    
     // どこかタップされたときポップアップを消し去る関数
     @objc func tapped(_ sender: UITapGestureRecognizer){
         self.view.removeFromSuperview()
     }
- }
+    
+    @IBAction func backButton(_ sender: UIButton) {
+        
+        dismiss(animated: true)
+    }
+    
+    func playVideo(_ forResource: String)  {
+        
+        // Bundle Resourcesからsample.mp4を読み込んで再生
+        print("** arrayVideo:\(forResource)")
+        let path = Bundle.main.path(forResource: forResource , ofType: "mp4")!
+        let player = AVPlayer(url: URL(fileURLWithPath: path))
+        player.play()
+        print(" ** path:\(path)")
+        
+        // AVPlayer用のLayerを生成
+        let playerLayer = AVPlayerLayer(player: player)
+        playerLayer.frame = movieView.bounds
+        playerLayer.videoGravity = .resizeAspectFill
+        playerLayer.zPosition = -2 // ボタン等よりも後ろに表示
+        movieView.layer.insertSublayer(playerLayer, at: 0) // 動画をレイヤーとして追加
+        
+        // 最後まで再生したら最初から再生する
+        let playerObserver = NotificationCenter.default.addObserver(
+            forName: .AVPlayerItemDidPlayToEndTime,
+            object: player.currentItem,
+            queue: .main) { [weak playerLayer] _ in
+                playerLayer?.player?.seek(to: CMTime.zero)
+                playerLayer?.player?.play()
+        }
+        
+        // 端末が回転した時に動画レイヤーのサイズを調整する
+        let boundsObserver = movieView.layer.observe(\.bounds) { [weak playerLayer] view, _ in
+            DispatchQueue.main.async {
+                playerLayer?.frame = view.bounds
+            }
+        }
+        
+        observers = (playerObserver,boundsObserver)
+    }
+    deinit {
+        // 画面が破棄された時に監視をやめる
+        if let observers = observers {
+            NotificationCenter.default.removeObserver(observers.player)
+            
+        }
+        
+    }
 
+  
+
+}

@@ -10,11 +10,11 @@ import UIKit
 import FirebaseAuth
 
 class EditViewController: UIViewController,UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
+    // プロフィール画像
     @IBOutlet weak var profileImageView: CircleImageView!
-    
+    // 名前
     @IBOutlet weak var userNameTextField: UITextField!
-    
+    // フレーズ
     @IBOutlet weak var phraseTextField: UITextField!
     
     override func viewDidLoad() {
@@ -57,7 +57,6 @@ class EditViewController: UIViewController,UITextFieldDelegate, UIImagePickerCon
     }
     
     @IBAction func changeProPhoto(_ sender: Any) {
-        
         // アクションシートを定義
         let alert = UIAlertController(title: "選択してください", message: nil, preferredStyle: .actionSheet)
         // カメラ機能

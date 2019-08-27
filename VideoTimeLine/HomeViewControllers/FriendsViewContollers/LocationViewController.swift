@@ -20,7 +20,10 @@ class LocationViewController: UIViewController {
     
     // ロングタップしたときに立てるピンを定義
     var pinByLongPress: MKPointAnnotation!
+    var latitude = ""
+    var longitude = ""
     
+   var selectName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,9 +57,10 @@ class LocationViewController: UIViewController {
         firebaseSave(location: longPressedCoordinate)
         
     }
+    // firebaseに保存する関数
     func firebaseSave(location: CLLocationCoordinate2D) {
         var ref: DocumentReference? = nil
-        ref = db.collection("mapLocation").addDocument(data: [
+        ref = db.collection("\(selectName)").addDocument(data: [
             "latitude": location.latitude,
             "longitude": location.longitude,
         ]) { err in
@@ -69,7 +73,7 @@ class LocationViewController: UIViewController {
     }
     
     func fech() {
-        db.collection("mapLocation").getDocuments() { (querySnapshot, err) in
+        db.collection("\(selectName)").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {

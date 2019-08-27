@@ -14,15 +14,17 @@ class TableViewCell: UITableViewCell {
     var observers: (player: NSObjectProtocol,
     bounds: NSKeyValueObservation)?
     
+    
+    
     //動画を流すviewを宣言
     @IBOutlet weak var movieView: UIView!
     
     override func setSelected(_ selected: Bool, animated: Bool) {
+        
         super.setSelected(selected, animated: animated)
         
     }
-    
-    // videoを流す
+    // videoを流す ================================================================
     func playVideo(_ forResource: String)  {
         
         // Bundle Resourcesからsample.mp4を読み込んで再生
@@ -61,7 +63,6 @@ class TableViewCell: UITableViewCell {
         // 画面が破棄された時に監視をやめる
         if let observers = observers {
             NotificationCenter.default.removeObserver(observers.player)
-            
         }
         
     }

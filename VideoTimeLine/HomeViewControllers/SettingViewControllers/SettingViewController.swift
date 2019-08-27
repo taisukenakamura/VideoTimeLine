@@ -9,10 +9,10 @@ import UIKit
 import FirebaseAuth
 
 class SettingViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
     // 設定ボタン
     @IBAction func editAction(_ sender: Any) {
@@ -33,7 +33,6 @@ class SettingViewController: UIViewController {
     }
     // ログアウト
     @IBAction func LogoutAction(_ sender: Any) {
-        
         // ログアウト処理
         try! Auth.auth().signOut()
         // storyboardのfileの特定
@@ -43,7 +42,7 @@ class SettingViewController: UIViewController {
         // 遷移処理
         self.present(vc, animated: true)
     }
-    
+    // ヘルプボタン
     @IBAction func helpButton(_ sender: UIButton) {
         // storyboardのfileの特定
         let storyboard: UIStoryboard = UIStoryboard(name: "Help", bundle: nil)
@@ -52,7 +51,7 @@ class SettingViewController: UIViewController {
         // 遷移処理
         self.present(vc, animated: true)
     }
-    
+    // 個人情報ボタン
     @IBAction func dataButton(_ sender: UIButton) {
         // storyboardのfileの特定
         let storyboard: UIStoryboard = UIStoryboard(name: "Data", bundle: nil)
@@ -61,9 +60,8 @@ class SettingViewController: UIViewController {
         // 遷移処理
         self.present(vc, animated: true)
     }
-    
+    // terms of serviceボタン
     @IBAction func tosButton(_ sender: UIButton) {
-        
         // storyboardのfileの特定
         let storyboard: UIStoryboard = UIStoryboard(name: "Tos", bundle: nil)
         // 移動先のvcをインスタンス化
@@ -71,7 +69,7 @@ class SettingViewController: UIViewController {
         // 遷移処理
         self.present(vc, animated: true)
     }
-    
+    // プライバシーボタン
     @IBAction func privacyButton(_ sender: UIButton) {
         // storyboardのfileの特定
         let storyboard: UIStoryboard = UIStoryboard(name: "Privacy", bundle: nil)

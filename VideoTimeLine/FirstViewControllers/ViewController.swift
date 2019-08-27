@@ -11,8 +11,6 @@ import AVFoundation
 import Firebase
 import FirebaseUI
 
-
-
 class ViewController: UIViewController, FUIAuthDelegate {
     
     @IBOutlet weak var signupButton: UIButton!
@@ -25,6 +23,7 @@ class ViewController: UIViewController, FUIAuthDelegate {
         FUIGoogleAuth(),
         FUIPhoneAuth(authUI:FUIAuth.defaultAuthUI()!)
     ]
+    
     private var observers: (player: NSObjectProtocol,bounds: NSKeyValueObservation)?
     
     override func viewDidLoad() {
@@ -33,7 +32,7 @@ class ViewController: UIViewController, FUIAuthDelegate {
         self.authUI.delegate = self
         self.authUI.providers = providers
         AuthButton.addTarget(self,action: #selector(self.AuthButtonTapped(sender:)),for: .touchUpInside)
-        
+        // 動画再生　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
         // Bundle Resourcesからsample.mp4を読み込んで再生
         let path = Bundle.main.path(forResource: "Owl - 18244", ofType: "mp4")!
         let player = AVPlayer(url: URL(fileURLWithPath: path))
@@ -63,7 +62,6 @@ class ViewController: UIViewController, FUIAuthDelegate {
                 playerLayer?.player?.play()
                 
         }
-     
         // 端末が回転した時に動画レイヤーのサイズを調整する
         let boundsObserver = view.layer.observe(\.bounds) { [weak playerLayer, weak dimOverlay] view, _ in
             DispatchQueue.main.async {
@@ -79,7 +77,7 @@ class ViewController: UIViewController, FUIAuthDelegate {
             NotificationCenter.default.removeObserver(observers.player)
             observers.bounds.invalidate()
         }
-    
+    // =======================================================================================
 }
     // ボタンをタップした際の挙動
     @objc func AuthButtonTapped(sender : AnyObject) {
