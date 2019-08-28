@@ -15,6 +15,8 @@ class HomeTabBarController: SwipeableTabBarController {
 
         if let viewControllers = viewControllers {
             selectedViewController = viewControllers[1]
+            
+            
         }
         
         /// Set the animation type for swipe
@@ -26,10 +28,12 @@ class HomeTabBarController: SwipeableTabBarController {
         /// if you want cycling switch tab, set true 'isCyclingEnabled'
         isCyclingEnabled = true
         
-        
         func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
             // Handle didSelect viewController method here
           
         }
     }
+    
+    
+    
 }

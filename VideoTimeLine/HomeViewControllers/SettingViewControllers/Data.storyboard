@@ -37,7 +37,7 @@ LOOKはロケーションベースのアプリケーションです。そのた�
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="個人データの保護について" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZT-v5-V25">
                                 <rect key="frame" x="0.0" y="44" width="414" height="50"/>
-                                <color key="backgroundColor" red="0.78295763949999997" green="0.93214066269999996" blue="0.99825638530000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.0" green="0.6588235294" blue="1" alpha="0.99973244859999999" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="bKq-2T-f9q"/>
                                 </constraints>
@@ -51,13 +51,15 @@ LOOKはロケーションベースのアプリケーションです。そのた�
                                     <constraint firstAttribute="width" constant="50" id="7o8-2M-Nuk"/>
                                     <constraint firstAttribute="height" constant="50" id="OXH-K0-k2t"/>
                                 </constraints>
-                                <state key="normal" title="←"/>
+                                <state key="normal" title="←">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="backButton:" destination="w07-nS-vnX" eventType="touchUpInside" id="l11-4j-ic2"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.0" green="0.6588235294" blue="1" alpha="0.99973244859999999" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="rim-aZ-6p0" firstAttribute="leading" secondItem="bd7-Id-Mbl" secondAttribute="leading" id="4NN-vw-vGu"/>
                             <constraint firstItem="bd7-Id-Mbl" firstAttribute="trailing" secondItem="rim-aZ-6p0" secondAttribute="trailing" id="Tfi-i3-Haa"/>

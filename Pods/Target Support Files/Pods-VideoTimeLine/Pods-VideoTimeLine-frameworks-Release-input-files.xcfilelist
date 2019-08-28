@@ -1,6 +1,7 @@
 ${PODS_ROOT}/Target Support Files/Pods-VideoTimeLine/Pods-VideoTimeLine-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/AMScrollingNavbar/AMScrollingNavbar.framework
 ${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework
+${BUILT_PRODUCTS_DIR}/EnhancedCircleImageView/EnhancedCircleImageView.framework
 ${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework
 ${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework
 ${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework

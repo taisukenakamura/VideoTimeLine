@@ -25,15 +25,20 @@ class TableViewCell: UITableViewCell {
         
     }
     // videoを流す ================================================================
-    func playVideo(_ forResource: String)  {
+    func playVideo(_ forResource: String,_ isPlay: Bool)  {
         
+       
         // Bundle Resourcesからsample.mp4を読み込んで再生
         print("** arrayVideo:\(forResource)")
         let path = Bundle.main.path(forResource: forResource , ofType: "mp4")!
         let player = AVPlayer(url: URL(fileURLWithPath: path))
+        if isPlay {
         player.play()
         print(" ** path:\(path)")
-        
+        } else {
+            
+        player.pause()
+        }
         // AVPlayer用のLayerを生成
         let playerLayer = AVPlayerLayer(player: player)
         playerLayer.frame = movieView.bounds
@@ -66,4 +71,6 @@ class TableViewCell: UITableViewCell {
         }
         
     }
+    
+  
 }

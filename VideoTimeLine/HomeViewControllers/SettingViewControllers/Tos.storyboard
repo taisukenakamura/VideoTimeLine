@@ -137,7 +137,7 @@
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="利用規約" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5Y-cj-i1Z">
                                 <rect key="frame" x="0.0" y="44" width="414" height="50"/>
-                                <color key="backgroundColor" red="0.78295763949999997" green="0.93214066269999996" blue="0.99825638530000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.0" green="0.6588235294" blue="1" alpha="0.99973244859999999" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="2Az-Di-KR0"/>
                                 </constraints>
@@ -151,13 +151,15 @@
                                     <constraint firstAttribute="height" constant="50" id="7hv-mD-TjK"/>
                                     <constraint firstAttribute="width" constant="50" id="E1d-o4-kfZ"/>
                                 </constraints>
-                                <state key="normal" title="←"/>
+                                <state key="normal" title="←">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="backButton:" destination="VJl-T1-QsY" eventType="touchUpInside" id="r8Z-G9-Kvc"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.0" green="0.6588235294" blue="1" alpha="0.99973244859999999" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="duQ-Uc-F11" firstAttribute="bottom" secondItem="QsQ-XT-skY" secondAttribute="bottom" id="17H-1j-71d"/>
                             <constraint firstItem="duQ-Uc-F11" firstAttribute="trailing" secondItem="a5Y-cj-i1Z" secondAttribute="trailing" id="1lX-Bn-u9j"/>

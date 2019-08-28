@@ -14,15 +14,13 @@ import TextFieldEffects
 
 class SignUpViewController: UIViewController {
     
-    
+    // メール入力欄
     @IBOutlet weak var emailTextField: YokoTextField!
+    // パスワード入力欄
     @IBOutlet weak var passwordTextField: YokoTextField!
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
     }
     
     // ユーザー新規作成
@@ -33,7 +31,7 @@ class SignUpViewController: UIViewController {
             // エラー時の処理
             if let error = error {
                 self.showErrorAlert(error: error)
-                // 成功時の処理
+            // 成功時の処理
             } else {
                 
                 let db = Firestore.firestore()
@@ -44,7 +42,6 @@ class SignUpViewController: UIViewController {
             }
         })
     }
-    
     
     // タイムラインへ遷移
     func toTimeLine() {

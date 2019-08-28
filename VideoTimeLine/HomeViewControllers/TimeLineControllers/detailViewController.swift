@@ -8,15 +8,23 @@
 
 import UIKit
 import AVFoundation
+import FirebaseFirestore
 
 class DetailViewController: UIViewController {
     // 初期値
     var selectedVideo: String = ""
+    var selectedNumber: Int = 0
     // 映像を流す
     @IBOutlet weak var movieView: UIView!
+    // 地図マップ
+    
+    // 名前
+    @IBOutlet weak var nameLabel: UILabel!
     
     var observers: (player: NSObjectProtocol,
     bounds: NSKeyValueObservation)?
+    // ラベルに代入する名前データ
+    let userName: [String] = ["フクロウくん","Taisuke Nakamura","Shoutaro Tauchi","Makoto Horita"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,12 +37,9 @@ class DetailViewController: UIViewController {
             blue: 150/255,
             alpha: 0.6
         )
+        nameLabel.text = userName[selectedNumber]
     }
     
-    // どこかタップされたときポップアップを消し去る関数
-    @objc func tapped(_ sender: UITapGestureRecognizer){
-        self.view.removeFromSuperview()
-    }
     
     @IBAction func backButton(_ sender: UIButton) {
         
@@ -81,9 +86,6 @@ class DetailViewController: UIViewController {
             NotificationCenter.default.removeObserver(observers.player)
             
         }
-        
     }
-
-  
-
 }
+

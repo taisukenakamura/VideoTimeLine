@@ -2,7 +2,7 @@
 //  FriendsTableViewCell.swift
 //  VideoTimeLine
 //
-//  Created by 中村泰輔 on 2019/08/22.
+//  Created by 中村泰輔 on 2019/08/28.
 //  Copyright © 2019 icannot.t.n. All rights reserved.
 //
 
@@ -10,12 +10,6 @@ import UIKit
 
 class FriendsTableViewCell: UITableViewCell {
 
-    
-    @IBOutlet weak var faceImageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    
-    @IBOutlet weak var locationLabel: UIButton!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -26,5 +20,5 @@ class FriendsTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
 }

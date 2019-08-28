@@ -28,5 +28,6 @@ target 'VideoTimeLine' do
     pod 'NextLevel'
     pod 'FirebaseUI' 
     pod 'IQKeyboardManagerSwift'
+    pod 'EnhancedCircleImageView'
      
 end

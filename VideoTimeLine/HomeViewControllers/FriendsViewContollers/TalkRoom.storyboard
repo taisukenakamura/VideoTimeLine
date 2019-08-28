@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Talk Room View Controller-->
+        <scene sceneID="to4-iy-fgj">
+            <objects>
+                <viewController storyboardIdentifier="TalkRoom" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pJm-aa-Uqs" customClass="TalkRoomViewController" customModule="VideoTimeLine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MJh-PQ-uC5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="トークルーム" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vev-VE-pnh">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.6588235294" blue="1" alpha="0.99973244859999999" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="waE-n5-ez0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bNg-wZ-JEf">
+                                <rect key="frame" x="0.0" y="94" width="414" height="768"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T0I-ED-Nf0">
+                                <rect key="frame" x="0.0" y="44" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="HC8-VY-enG"/>
+                                    <constraint firstAttribute="width" constant="50" id="HNR-XZ-aKe"/>
+                                </constraints>
+                                <state key="normal" title="←">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButton:" destination="pJm-aa-Uqs" eventType="touchUpInside" id="bi4-Tw-Jod"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.6588235294" blue="1" alpha="0.99973244859999999" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="vev-VE-pnh" firstAttribute="leading" secondItem="dJu-md-zpb" secondAttribute="leading" id="8yM-LV-Mk1"/>
+                            <constraint firstItem="bNg-wZ-JEf" firstAttribute="top" secondItem="vev-VE-pnh" secondAttribute="bottom" id="Eqa-a7-TKb"/>
+                            <constraint firstItem="dJu-md-zpb" firstAttribute="trailing" secondItem="vev-VE-pnh" secondAttribute="trailing" id="NhB-og-VbK"/>
+                            <constraint firstItem="T0I-ED-Nf0" firstAttribute="leading" secondItem="dJu-md-zpb" secondAttribute="leading" id="Z1H-An-Xhk"/>
+                            <constraint firstItem="dJu-md-zpb" firstAttribute="bottom" secondItem="bNg-wZ-JEf" secondAttribute="bottom" id="fQ1-Yz-eIv"/>
+                            <constraint firstItem="dJu-md-zpb" firstAttribute="trailing" secondItem="bNg-wZ-JEf" secondAttribute="trailing" id="rwZ-I0-A20"/>
+                            <constraint firstItem="vev-VE-pnh" firstAttribute="top" secondItem="dJu-md-zpb" secondAttribute="top" id="sdN-za-jgC"/>
+                            <constraint firstItem="bNg-wZ-JEf" firstAttribute="leading" secondItem="dJu-md-zpb" secondAttribute="leading" id="vwv-Ym-LcZ"/>
+                            <constraint firstItem="T0I-ED-Nf0" firstAttribute="top" secondItem="dJu-md-zpb" secondAttribute="top" id="zPO-IG-mbR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dJu-md-zpb"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="bNg-wZ-JEf" id="ZXu-r9-BJ3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UOC-xb-8Y5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="94" y="13"/>
+        </scene>
+    </scenes>
+</document>

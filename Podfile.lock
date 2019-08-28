@@ -6,6 +6,7 @@ PODS:
   - BoringSSL-GRPC/Implementation (0.0.3):
     - BoringSSL-GRPC/Interface (= 0.0.3)
   - BoringSSL-GRPC/Interface (0.0.3)
+  - EnhancedCircleImageView (0.1)
   - FBSDKCoreKit (5.4.0):
     - FBSDKCoreKit/Basics (= 5.4.0)
     - FBSDKCoreKit/Core (= 5.4.0)
@@ -198,6 +199,7 @@ PODS:
 
 DEPENDENCIES:
   - AMScrollingNavbar
+  - EnhancedCircleImageView
   - Firebase
   - Firebase/Analytics
   - Firebase/Auth
@@ -212,6 +214,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AMScrollingNavbar
     - BoringSSL-GRPC
+    - EnhancedCircleImageView
     - FBSDKCoreKit
     - FBSDKLoginKit
     - Firebase
@@ -247,6 +250,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AMScrollingNavbar: 8548c0df70da8f894217a709d9b2555b9d0babbe
   BoringSSL-GRPC: db8764df3204ccea016e1c8dd15d9a9ad63ff318
+  EnhancedCircleImageView: 1069bbc14526d89502cc0e48b45f5da6a3317a47
   FBSDKCoreKit: 026e56cf2c2cebc656cf2aec5c6898b8c4f33930
   FBSDKLoginKit: f5064bb8f20c065ee1ea5987cbe0475b713edf9b
   Firebase: a2b5951f30ff38fd3b3bdae9c7d340f940fd3c51
@@ -279,6 +283,6 @@ SPEC CHECKSUMS:
   SwipeableTabBarController: 8f7f04275f510c5babb630f7be1161b5f28567e0
   TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
 
-PODFILE CHECKSUM: ff8b9da252a45526c9c58402bb01d369188851ea
+PODFILE CHECKSUM: f88b6361f284f64b33d2ac6c4e955b27abff96ce
 
 COCOAPODS: 1.7.5

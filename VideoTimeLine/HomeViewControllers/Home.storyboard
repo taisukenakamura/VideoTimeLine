@@ -24,20 +24,21 @@
                                 <searchBar key="tableHeaderView" contentMode="redraw" placeholder="search" showsCancelButton="YES" id="jGs-ZT-ALO">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    <color key="tintColor" red="0.48488646520000001" green="0.65016770960000003" blue="0.90200918910000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <color key="barTintColor" red="0.85910242889999999" green="0.97514071729999996" blue="0.99825638530000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="barTintColor" red="0.0" green="0.6588235294" blue="1" alpha="0.99973244859999999" colorSpace="custom" customColorSpace="displayP3"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </searchBar>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendsViewCell" rowHeight="76" id="qbW-D6-KJm">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendsViewCell" rowHeight="76" id="qbW-D6-KJm" customClass="FriendsTableViewCell">
                                         <rect key="frame" x="0.0" y="72" width="320" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qbW-D6-KJm" id="Tjy-fO-yJD">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="75.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="フクロウのイラスト1 (2)" translatesAutoresizingMaskIntoConstraints="NO" id="LCL-gT-iLr" customClass="CircleImageView" customModule="VideoTimeLine" customModuleProvider="target">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="s_owl-158411_640" translatesAutoresizingMaskIntoConstraints="NO" id="LCL-gT-iLr" customClass="EnhancedCircleImageView" customModule="EnhancedCircleImageView">
                                                     <rect key="frame" x="0.0" y="0.0" width="70" height="75.5"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="70" id="fvy-oS-6qa"/>
                                                     </constraints>
@@ -47,20 +48,20 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5U-0u-Ao4">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5U-0u-Ao4">
                                                     <rect key="frame" x="70" y="0.0" width="200" height="75.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SvH-A7-grv">
+                                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SvH-A7-grv">
                                                     <rect key="frame" x="270" y="0.0" width="50" height="75.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="Hvk-sl-Su7"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button" image="日本地図のアイコン"/>
+                                                    <state key="normal" image="コメントアイコン7 (2)"/>
                                                     <connections>
-                                                        <action selector="locationButton:" destination="Egx-4h-plU" eventType="touchUpInside" id="ccU-Ja-oS3"/>
+                                                        <action selector="talkButton:" destination="Egx-4h-plU" eventType="touchUpInside" id="ceF-MY-ObM"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -77,7 +78,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="SvH-A7-grv" secondAttribute="trailing" id="zrV-xe-IDz"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.0" green="0.6588235294" blue="1" alpha="0.99973244859999999" colorSpace="custom" customColorSpace="displayP3"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="dividerThickness">
                                                 <real key="value" value="5"/>
@@ -104,7 +105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="51V-Xv-Dsm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="784" y="-786"/>
+            <point key="canvasLocation" x="328" y="-842"/>
         </scene>
         <!--何してる？-->
         <scene sceneID="blg-Uw-cl7">
@@ -160,7 +161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j50-IM-Ylb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653" y="-33"/>
+            <point key="canvasLocation" x="587" y="-123"/>
         </scene>
         <!--設定-->
         <scene sceneID="iOh-Lw-BPn">
@@ -171,37 +172,53 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="HR5-S4-PvV">
-                                <rect key="frame" x="0.0" y="64" width="320" height="205"/>
+                                <rect key="frame" x="0.0" y="79" width="320" height="197.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Upy-zb-Hhe">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="51.5"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                                        <color key="backgroundColor" red="0.0" green="0.6588235294" blue="1" alpha="0.99973244859999999" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="プロフィール編集"/>
+                                        <size key="titleShadowOffset" width="1" height="1"/>
+                                        <state key="normal" title="プロフィール編集">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="editAction:" destination="Kgk-MR-IQb" eventType="touchUpInside" id="Lr3-je-IWC"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8V1-uW-BxN">
-                                        <rect key="frame" x="0.0" y="51.5" width="320" height="51"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <rect key="frame" x="0.0" y="49.5" width="320" height="49.5"/>
+                                        <color key="backgroundColor" red="0.0" green="0.6588235294" blue="1" alpha="0.99973244859999999" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="アカウント設定"/>
+                                        <size key="titleShadowOffset" width="1" height="1"/>
+                                        <state key="normal" title="アカウント設定">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1G-Cl-hIH">
-                                        <rect key="frame" x="0.0" y="102.5" width="320" height="51.5"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <rect key="frame" x="0.0" y="99" width="320" height="49"/>
+                                        <color key="backgroundColor" red="0.0" green="0.6588235294" blue="1" alpha="0.99973244859999999" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="配信履歴"/>
+                                        <size key="titleShadowOffset" width="1" height="1"/>
+                                        <state key="normal" title="配信履歴">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="logButton:" destination="Kgk-MR-IQb" eventType="touchUpInside" id="RAO-2h-5pF"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lj-ro-eg7">
-                                        <rect key="frame" x="0.0" y="154" width="320" height="51"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <rect key="frame" x="0.0" y="148" width="320" height="49.5"/>
+                                        <color key="backgroundColor" red="0.0" green="0.6588235294" blue="1" alpha="0.99973244859999999" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="ログアウト"/>
+                                        <size key="titleShadowOffset" width="1" height="1"/>
+                                        <state key="normal" title="ログアウト">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="LogoutAction:" destination="Kgk-MR-IQb" eventType="touchUpInside" id="8UL-lr-qIQ"/>
                                         </connections>
@@ -209,40 +226,55 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0J5-Mw-Heo">
-                                <rect key="frame" x="0.0" y="299" width="320" height="220"/>
+                                <rect key="frame" x="0.0" y="291.5" width="320" height="227.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mri-pP-hRR">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
-                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="57"/>
+                                        <color key="backgroundColor" red="0.0" green="0.6588235294" blue="1" alpha="0.99973244859999999" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="ヘルプ"/>
+                                        <size key="titleShadowOffset" width="1" height="1"/>
+                                        <state key="normal" title="ヘルプ">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="helpButton:" destination="Kgk-MR-IQb" eventType="touchUpInside" id="2O5-x6-UqS"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soy-jb-1Vx">
-                                        <rect key="frame" x="0.0" y="55" width="320" height="55"/>
-                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="0.0" y="57" width="320" height="57"/>
+                                        <color key="backgroundColor" red="0.0" green="0.6588235294" blue="1" alpha="0.99973244859999999" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="個人データの保護について"/>
+                                        <size key="titleShadowOffset" width="1" height="1"/>
+                                        <state key="normal" title="個人データの保護について">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="dataButton:" destination="Kgk-MR-IQb" eventType="touchUpInside" id="AI6-af-GDc"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hb1-yZ-Oc5">
-                                        <rect key="frame" x="0.0" y="110" width="320" height="55"/>
-                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="0.0" y="114" width="320" height="56.5"/>
+                                        <color key="backgroundColor" red="0.0" green="0.6588235294" blue="1" alpha="0.99973244859999999" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="利用規約"/>
+                                        <state key="normal" title="利用規約">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="tosButton:" destination="Kgk-MR-IQb" eventType="touchUpInside" id="zBy-3m-jCm"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wz-BS-ex8">
-                                        <rect key="frame" x="0.0" y="165" width="320" height="55"/>
-                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="0.0" y="170.5" width="320" height="57"/>
+                                        <color key="backgroundColor" red="0.0" green="0.6588235294" blue="1" alpha="0.99973244859999999" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="プライバシー・ポリシー"/>
+                                        <size key="titleShadowOffset" width="1" height="1"/>
+                                        <state key="normal" title="プライバシー・ポリシー">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="privacyButton:" destination="Kgk-MR-IQb" eventType="touchUpInside" id="eF6-fV-bvO"/>
                                         </connections>
@@ -250,20 +282,28 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="詳細" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07u-f2-WSr">
-                                <rect key="frame" x="0.0" y="269" width="320" height="30"/>
-                                <color key="backgroundColor" red="0.48488646520000001" green="0.79797196059999997" blue="0.90200918910000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="frame" x="0.0" y="276.5" width="320" height="15"/>
+                                <color key="backgroundColor" red="0.52930965160165488" green="0.7201243164075033" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="3n1-Po-7pM"/>
+                                    <constraint firstAttribute="height" constant="15" id="3n1-Po-7pM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="プロフィール" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Vc-NA-Hy3">
+                                <rect key="frame" x="0.0" y="64" width="320" height="15"/>
+                                <color key="backgroundColor" red="0.52930965160165488" green="0.7201243164075033" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="BL1-wa-R7a"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="07u-f2-WSr" firstAttribute="centerY" secondItem="z5j-Sz-kH8" secondAttribute="centerY" id="2HH-dC-wpS"/>
-                            <constraint firstItem="HR5-S4-PvV" firstAttribute="top" secondItem="6LM-4m-LrS" secondAttribute="top" id="BIH-Du-LIO"/>
+                            <constraint firstItem="HR5-S4-PvV" firstAttribute="top" secondItem="4Vc-NA-Hy3" secondAttribute="bottom" id="3CQ-vd-kuN"/>
                             <constraint firstItem="6LM-4m-LrS" firstAttribute="trailing" secondItem="0J5-Mw-Heo" secondAttribute="trailing" id="SDC-wW-cU3"/>
                             <constraint firstItem="0J5-Mw-Heo" firstAttribute="leading" secondItem="6LM-4m-LrS" secondAttribute="leading" id="SwA-C3-3wM"/>
                             <constraint firstItem="HR5-S4-PvV" firstAttribute="leading" secondItem="6LM-4m-LrS" secondAttribute="leading" id="VrR-1U-cPH"/>
@@ -274,6 +314,9 @@
                             <constraint firstItem="6LM-4m-LrS" firstAttribute="trailing" secondItem="HR5-S4-PvV" secondAttribute="trailing" id="lMK-Ll-xdO"/>
                             <constraint firstItem="07u-f2-WSr" firstAttribute="centerX" secondItem="z5j-Sz-kH8" secondAttribute="centerX" id="orN-1C-dL8"/>
                             <constraint firstItem="6LM-4m-LrS" firstAttribute="bottom" secondItem="0J5-Mw-Heo" secondAttribute="bottom" id="v2b-tk-9kZ"/>
+                            <constraint firstItem="4Vc-NA-Hy3" firstAttribute="leading" secondItem="6LM-4m-LrS" secondAttribute="leading" id="vcW-Bx-jth"/>
+                            <constraint firstItem="HR5-S4-PvV" firstAttribute="top" secondItem="6LM-4m-LrS" secondAttribute="top" constant="15" id="wUp-z4-ki0"/>
+                            <constraint firstItem="6LM-4m-LrS" firstAttribute="trailing" secondItem="4Vc-NA-Hy3" secondAttribute="trailing" id="xR0-iA-7dO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6LM-4m-LrS"/>
                     </view>
@@ -281,7 +324,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gcr-bz-gR6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="877.5" y="730.9859154929577"/>
+            <point key="canvasLocation" x="600" y="699"/>
         </scene>
         <!--Home Tab Bar Controller-->
         <scene sceneID="jpu-s8-cMF">
@@ -291,7 +334,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" red="0.48488646520000001" green="0.79797196061643838" blue="0.90200918910000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.0" green="0.6588235294" blue="1" alpha="0.99973244859999999" colorSpace="custom" customColorSpace="displayP3"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                            <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                <size key="value" width="6" height="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                <integer key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                <real key="value" value="0.80000000000000004"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="WG8-Ys-PfJ" kind="relationship" relationship="viewControllers" id="E7D-41-aEw"/>
@@ -312,7 +370,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WGb-il-doZ">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.48488646520000001" green="0.79797196059999997" blue="0.90200918910000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.0" green="0.6588235294" blue="1" alpha="0.99973244859999999" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -332,7 +390,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AwJ-6V-j8r">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.48488646520000001" green="0.79797196059999997" blue="0.90200918910000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.0" green="0.6588235294" blue="1" alpha="0.99973244859999999" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -352,7 +410,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="D7Y-Da-wgz">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.48488646520000001" green="0.79797196059999997" blue="0.90200918910000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.0" green="0.6588235294" blue="1" alpha="0.99973244859999999" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -365,10 +423,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="s_owl-158411_640" width="50" height="45"/>
         <image name="インターネットのアイコン" width="32" height="32"/>
-        <image name="フクロウのイラスト1 (2)" width="48" height="48"/>
+        <image name="コメントアイコン7 (2)" width="48" height="48"/>
         <image name="フクロウのフリー素材3" width="32" height="32"/>
         <image name="フクロウアイコン4" width="32" height="32"/>
-        <image name="日本地図のアイコン" width="32" height="32"/>
     </resources>
 </document>

@@ -22,35 +22,25 @@
                                 <rect key="frame" x="57" y="298" width="300" height="300"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iyo-Zg-5u3">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="240"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="135"/>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qip-F3-hRR">
-                                        <rect key="frame" x="0.0" y="240" width="300" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="X2m-Ij-ywb"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6g-zK-oXQ">
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Zgn-ZJ-65n">
+                                        <rect key="frame" x="0.0" y="135" width="300" height="135"/>
+                                    </mapView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uge-Wr-K3X">
                                         <rect key="frame" x="0.0" y="270" width="300" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="3vC-HL-Zgw"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Q6g-zK-oXQ" firstAttribute="leading" secondItem="Mme-mR-fZ6" secondAttribute="leading" id="6A8-VO-njo"/>
-                                    <constraint firstAttribute="trailing" secondItem="Q6g-zK-oXQ" secondAttribute="trailing" id="Da6-v6-jSb"/>
-                                    <constraint firstAttribute="bottom" secondItem="Q6g-zK-oXQ" secondAttribute="bottom" id="cdu-yb-xoJ"/>
-                                    <constraint firstItem="Qip-F3-hRR" firstAttribute="height" secondItem="Q6g-zK-oXQ" secondAttribute="height" id="fwa-nV-xKL"/>
+                                    <constraint firstItem="Zgn-ZJ-65n" firstAttribute="height" secondItem="iyo-Zg-5u3" secondAttribute="height" id="Qcx-MH-yvS"/>
                                     <constraint firstAttribute="height" constant="300" id="jSh-qh-l69"/>
-                                    <constraint firstItem="Qip-F3-hRR" firstAttribute="top" secondItem="iyo-Zg-5u3" secondAttribute="bottom" id="o7f-ML-rr0"/>
-                                    <constraint firstItem="Q6g-zK-oXQ" firstAttribute="top" secondItem="Qip-F3-hRR" secondAttribute="bottom" id="oHb-tD-AoF"/>
-                                    <constraint firstAttribute="trailing" secondItem="Qip-F3-hRR" secondAttribute="trailing" id="qQk-dP-gw4"/>
                                     <constraint firstAttribute="width" constant="300" id="tqu-pv-d5b"/>
-                                    <constraint firstItem="Qip-F3-hRR" firstAttribute="leading" secondItem="Mme-mR-fZ6" secondAttribute="leading" id="xCT-wf-5wo"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UlZ-QH-7OW">
@@ -65,7 +55,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="backButton:" destination="fsd-xv-5Xu" eventType="touchUpInside" id="ZSP-Bp-FEX"/>
+                                    <action selector="backButton:" destination="fsd-xv-5Xu" eventType="touchUpInside" id="DYz-d7-F2r"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -79,12 +69,13 @@
                         <viewLayoutGuide key="safeArea" id="sss-JW-l35"/>
                     </view>
                     <connections>
-                        <outlet property="movieView" destination="iyo-Zg-5u3" id="3NS-6x-iyz"/>
+                        <outlet property="movieView" destination="iyo-Zg-5u3" id="fjC-99-dYa"/>
+                        <outlet property="nameLabel" destination="uge-Wr-K3X" id="dVl-Df-Xwb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="65h-Jv-1ln" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-497" y="117"/>
+            <point key="canvasLocation" x="-513" y="92"/>
         </scene>
     </scenes>
 </document>

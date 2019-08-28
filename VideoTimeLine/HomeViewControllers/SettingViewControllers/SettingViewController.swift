@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseAuth
 
+
 class SettingViewController: UIViewController {
     
     override func viewDidLoad() {
@@ -15,7 +16,7 @@ class SettingViewController: UIViewController {
         
     }
     // 設定ボタン
-    @IBAction func editAction(_ sender: Any) {
+    @IBAction func editAction(_ sender: UIButton) {
         let storyboard: UIStoryboard = UIStoryboard(name: "Profile", bundle: nil)
         // 移動先のvcをインスタンス化(ここの"Main"はStoryboardId。"Main"は起動時に設定されています。)
         let vc = storyboard.instantiateViewController(withIdentifier: "Edit")
@@ -23,7 +24,7 @@ class SettingViewController: UIViewController {
         self.present(vc, animated: true)
     }
     // 配信履歴ボタン
-    @IBAction func logButton(_ sender: Any) {
+    @IBAction func logButton(_ sender:  UIButton) {
         // storyboardのfileの特定
         let storyboard: UIStoryboard = UIStoryboard(name: "movieLog", bundle: nil)
         // 移動先のvcをインスタンス化
@@ -32,7 +33,7 @@ class SettingViewController: UIViewController {
         self.present(vc, animated: true)
     }
     // ログアウト
-    @IBAction func LogoutAction(_ sender: Any) {
+    @IBAction func LogoutAction(_ sender:  UIButton) {
         // ログアウト処理
         try! Auth.auth().signOut()
         // storyboardのfileの特定

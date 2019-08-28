@@ -18,7 +18,6 @@
 		781D4E172315072500481488 /* AVFoundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781D4E162315072500481488 /* AVFoundation.swift */; };
 		7855AE932312731D00A1ADAE /* 588411524.751567.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7855AE922312731B00A1ADAE /* 588411524.751567.mp4 */; };
 		785D0243230A4794003545B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785D0242230A4794003545B9 /* AppDelegate.swift */; };
-		785D0245230A4794003545B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785D0244230A4794003545B9 /* ViewController.swift */; };
 		785D0248230A4794003545B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 785D0246230A4794003545B9 /* Main.storyboard */; };
 		785D024A230A4796003545B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 785D0249230A4796003545B9 /* Assets.xcassets */; };
 		785D024D230A4796003545B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 785D024B230A4796003545B9 /* LaunchScreen.storyboard */; };
@@ -30,10 +29,15 @@
 		785D027C230A7F3F003545B9 /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 785D027B230A7F3F003545B9 /* Signup.storyboard */; };
 		785D027E230A93AD003545B9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785D027D230A93AD003545B9 /* SignUpViewController.swift */; };
 		78916E10230E1A58003A1510 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78916E0F230E1A58003A1510 /* Profile.storyboard */; };
-		78916E12230E20D4003A1510 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78916E11230E20D3003A1510 /* CircleImage.swift */; };
 		78916E14230E2538003A1510 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78916E13230E2538003A1510 /* EditViewController.swift */; };
 		78916E1B230EB444003A1510 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78916E19230EB443003A1510 /* TableViewCell.swift */; };
 		789B07B1230AC8FC00D938DA /* Owl - 18244.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 789B07B0230AC8FB00D938DA /* Owl - 18244.mp4 */; };
+		78B226EA231620EF0025D883 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B226E9231620ED0025D883 /* ViewController.swift */; };
+		78B226FF2316633B0025D883 /* TalkRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B226FE2316633B0025D883 /* TalkRoomTableViewCell.swift */; };
+		78B22701231664D00025D883 /* TalkRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78B22700231664D00025D883 /* TalkRoom.storyboard */; };
+		78B22703231664FA0025D883 /* TalkRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B22702231664FA0025D883 /* TalkRoomViewController.swift */; };
+		78B227052316749D0025D883 /* マイムービー.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 78B227042316749B0025D883 /* マイムービー.mp4 */; };
+		78B22707231675CC0025D883 /* makoto.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 78B22706231675CA0025D883 /* makoto.mp4 */; };
 		78DFEED523137090005A9031 /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78DFEED423137090005A9031 /* Help.storyboard */; };
 		78DFEED9231370C9005A9031 /* Tos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78DFEED8231370C9005A9031 /* Tos.storyboard */; };
 		78DFEEDB231370E9005A9031 /* Data.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78DFEEDA231370E9005A9031 /* Data.storyboard */; };
@@ -84,7 +88,6 @@
 		7855AE922312731B00A1ADAE /* 588411524.751567.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 588411524.751567.mp4; sourceTree = "<group>"; };
 		785D023F230A4794003545B9 /* VideoTimeLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoTimeLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		785D0242230A4794003545B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		785D0244230A4794003545B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		785D0247230A4794003545B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		785D0249230A4796003545B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		785D024C230A4796003545B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -101,10 +104,15 @@
 		785D027B230A7F3F003545B9 /* Signup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
 		785D027D230A93AD003545B9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		78916E0F230E1A58003A1510 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
-		78916E11230E20D3003A1510 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		78916E13230E2538003A1510 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		78916E19230EB443003A1510 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		789B07B0230AC8FB00D938DA /* Owl - 18244.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Owl - 18244.mp4"; sourceTree = "<group>"; };
+		78B226E9231620ED0025D883 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		78B226FE2316633B0025D883 /* TalkRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkRoomTableViewCell.swift; sourceTree = "<group>"; };
+		78B22700231664D00025D883 /* TalkRoom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TalkRoom.storyboard; sourceTree = "<group>"; };
+		78B22702231664FA0025D883 /* TalkRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TalkRoomViewController.swift; path = ChatViewControllers/TalkRoomViewController.swift; sourceTree = "<group>"; };
+		78B227042316749B0025D883 /* マイムービー.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "マイムービー.mp4"; sourceTree = "<group>"; };
+		78B22706231675CA0025D883 /* makoto.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = makoto.mp4; sourceTree = "<group>"; };
 		78DFEED423137090005A9031 /* Help.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Help.storyboard; sourceTree = "<group>"; };
 		78DFEED8231370C9005A9031 /* Tos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tos.storyboard; sourceTree = "<group>"; };
 		78DFEEDA231370E9005A9031 /* Data.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Data.storyboard; sourceTree = "<group>"; };
@@ -190,11 +198,13 @@
 			children = (
 				789B07B0230AC8FB00D938DA /* Owl - 18244.mp4 */,
 				7855AE922312731B00A1ADAE /* 588411524.751567.mp4 */,
+				78B227042316749B0025D883 /* マイムービー.mp4 */,
+				78B22706231675CA0025D883 /* makoto.mp4 */,
 				785D0242230A4794003545B9 /* AppDelegate.swift */,
-				78916E11230E20D3003A1510 /* CircleImage.swift */,
 				78F4FE37230B856F00510537 /* HomeTabBarController.swift */,
 				781D4E162315072500481488 /* AVFoundation.swift */,
 				785D0246230A4794003545B9 /* Main.storyboard */,
+				78B226E9231620ED0025D883 /* ViewController.swift */,
 				785D0276230A64EB003545B9 /* FirstViewControllers */,
 				78F4FE31230B818300510537 /* HomeViewControllers */,
 				785D024B230A4796003545B9 /* LaunchScreen.storyboard */,
@@ -226,7 +236,6 @@
 		785D0276230A64EB003545B9 /* FirstViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				785D0244230A4794003545B9 /* ViewController.swift */,
 				785D0274230A64D5003545B9 /* LoginViewController.swift */,
 				785D027D230A93AD003545B9 /* SignUpViewController.swift */,
 				785D0279230A7F0E003545B9 /* Login.storyboard */,
@@ -252,6 +261,9 @@
 				78F4FE43230BD36A00510537 /* FriendsViewController.swift */,
 				78198E3C230FA6ED00505B7E /* Location.storyboard */,
 				78198E3A230FA61400505B7E /* LocationViewController.swift */,
+				78B22700231664D00025D883 /* TalkRoom.storyboard */,
+				78B22702231664FA0025D883 /* TalkRoomViewController.swift */,
+				78B226FE2316633B0025D883 /* TalkRoomTableViewCell.swift */,
 			);
 			path = FriendsViewContollers;
 			sourceTree = "<group>";
@@ -259,8 +271,8 @@
 		78DFEED323136FD3005A9031 /* SettingViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				78F4FE47230BD58E00510537 /* SettingViewController.swift */,
 				781D4DBE2313B18500481488 /* movieLog.storyboard */,
+				78F4FE47230BD58E00510537 /* SettingViewController.swift */,
 				781D4DC02313B20800481488 /* movieLogViewController.swift */,
 				78916E0F230E1A58003A1510 /* Profile.storyboard */,
 				78916E13230E2538003A1510 /* EditViewController.swift */,
@@ -415,6 +427,7 @@
 				78916E10230E1A58003A1510 /* Profile.storyboard in Resources */,
 				781D4DCD2313E22000481488 /* Detail.storyboard in Resources */,
 				781D4DBF2313B18500481488 /* movieLog.storyboard in Resources */,
+				78B22701231664D00025D883 /* TalkRoom.storyboard in Resources */,
 				78DFEEDB231370E9005A9031 /* Data.storyboard in Resources */,
 				785D024D230A4796003545B9 /* LaunchScreen.storyboard in Resources */,
 				785D024A230A4796003545B9 /* Assets.xcassets in Resources */,
@@ -425,7 +438,9 @@
 				78DFEED523137090005A9031 /* Help.storyboard in Resources */,
 				78DFEED9231370C9005A9031 /* Tos.storyboard in Resources */,
 				785D0248230A4794003545B9 /* Main.storyboard in Resources */,
+				78B22707231675CC0025D883 /* makoto.mp4 in Resources */,
 				7855AE932312731D00A1ADAE /* 588411524.751567.mp4 in Resources */,
+				78B227052316749D0025D883 /* マイムービー.mp4 in Resources */,
 				785D0273230A5C6A003545B9 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -555,13 +570,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				78916E1B230EB444003A1510 /* TableViewCell.swift in Sources */,
-				78916E12230E20D4003A1510 /* CircleImage.swift in Sources */,
-				785D0245230A4794003545B9 /* ViewController.swift in Sources */,
 				781D4DC12313B20800481488 /* movieLogViewController.swift in Sources */,
 				78DFEEE12313813F005A9031 /* HelpViewController.swift in Sources */,
+				78B226FF2316633B0025D883 /* TalkRoomTableViewCell.swift in Sources */,
 				78DFEEE723138BC8005A9031 /* PrivacyViewController.swift in Sources */,
 				785D0275230A64D5003545B9 /* LoginViewController.swift in Sources */,
 				78F4FE38230B857000510537 /* HomeTabBarController.swift in Sources */,
+				78B226EA231620EF0025D883 /* ViewController.swift in Sources */,
 				78F4FE46230BD47300510537 /* TimeLineViewController.swift in Sources */,
 				78916E14230E2538003A1510 /* EditViewController.swift in Sources */,
 				781D4DCB2313E19E00481488 /* DetailViewController.swift in Sources */,
@@ -570,6 +585,7 @@
 				785D027E230A93AD003545B9 /* SignUpViewController.swift in Sources */,
 				78DFEEE32313859A005A9031 /* DataViewController.swift in Sources */,
 				78F4FE3A230B8DAE00510537 /* HomeTabBarController.swift in Sources */,
+				78B22703231664FA0025D883 /* TalkRoomViewController.swift in Sources */,
 				78DFEEE5231386DC005A9031 /* TosViewController.swift in Sources */,
 				785D0243230A4794003545B9 /* AppDelegate.swift in Sources */,
 				78198E3B230FA61400505B7E /* LocationViewController.swift in Sources */,

@@ -19,13 +19,11 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
     // tableViewの接続
     @IBOutlet weak var tableView: UITableView!
     // mp4のresourceを配列で格納
-    let resourceList: [String] = ["Owl - 18244","588411524.751567", "Owl - 18244", "Owl - 18244"]
+    let resourceList: [String] = ["Owl - 18244","588411524.751567","マイムービー","makoto"]
     // refreshControlインスタンス化
     let refreshControl = UIRefreshControl()
-    /// AVプレイヤー情報
-    var player = AVPlayer()
-    /// 再生したか否か
-    var isPlay: Bool = false
+
+   
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,7 +62,7 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableViewCell
         // セルにビデオを流す
-        cell.playVideo(resourceList[indexPath.row])
+        cell.playVideo(resourceList[indexPath.row],true)
         
         
         return cell
@@ -81,7 +79,7 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         print("*****************")
         let storyboard: UIStoryboard = UIStoryboard(name: "Detail", bundle: nil)
         let vc: DetailViewController = storyboard.instantiateViewController(withIdentifier: "Detail") as! DetailViewController
-        
+       
         //送信者の状態が　タッチ開始時にlongが認識される
         if sender.state == .began{
             //開始は認知される
@@ -90,15 +88,22 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
             let point = sender.location(in: tableView)
             var indexPath = tableView.indexPathForRow(at: point)
             let selectedVideo = resourceList[(indexPath?.row)!]
-            print("長押しされたcellのindexPath:\(indexPath?.row)")
+            let selectedNumber = indexPath?.row
+            print("長押しされたcellのindexPath:\(String(describing: indexPath?.row))")
+
             vc.selectedVideo = selectedVideo
-            
+            vc.selectedNumber = selectedNumber!
             present(vc, animated: true)
         }
         else if sender.state == .ended {
-            
+        
         }
     }
+    
+   
+    
+    
+    
 }
 
 

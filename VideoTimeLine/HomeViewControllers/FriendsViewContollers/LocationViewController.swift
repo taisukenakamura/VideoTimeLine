@@ -20,10 +20,8 @@ class LocationViewController: UIViewController {
     
     // ロングタップしたときに立てるピンを定義
     var pinByLongPress: MKPointAnnotation!
-    var latitude = ""
-    var longitude = ""
     
-   var selectName = ""
+    var selectName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +31,9 @@ class LocationViewController: UIViewController {
         myLocationManager.requestWhenInUseAuthorization()
         
         fech()
+
         
+      
     }
     
     @IBAction func longPress(_ sender: UILongPressGestureRecognizer) {
@@ -89,11 +89,15 @@ class LocationViewController: UIViewController {
                             print("double 変換失敗")
                             return
                     }
+                    
                     //インスタンス化
                     self.pinByLongPress = MKPointAnnotation()
                     let location = CLLocationCoordinate2D(latitude: moge, longitude: koge)
                     self.pinByLongPress.coordinate = location
                     self.mapView.addAnnotation(self.pinByLongPress)
+                    let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+                    let region = MKCoordinateRegion(center: location, span: span)
+                    self.mapView.setRegion(region, animated: true)
                 }
             }
         }
@@ -107,7 +111,7 @@ class LocationViewController: UIViewController {
     }
 }
 
-extension ViewController: CLLocationManagerDelegate {
+extension LocationViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {

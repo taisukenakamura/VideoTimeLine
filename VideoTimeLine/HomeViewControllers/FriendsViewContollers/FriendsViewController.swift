@@ -10,12 +10,12 @@ import UIKit
 import CoreLocation
 
 class FriendsViewController: UIViewController,UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
-    
+    // tableViewと接続
     @IBOutlet weak var tableView: UITableView!
+    // searchbar
     @IBOutlet weak var searchBar: UISearchBar!
-    
+    // 検索結果
     var searchResults:[String] = []
-   
     // 友達ストック
     var friendsList: [String] = ["Yusuke Ono","Taiga Shiga","Kichi Fukuzawa","Yuta Wanme","Shoutarou Tauchi","Makoto Horita","Masahiro Toyooka","Yu Nagai","Yusaku Kanada","Nana Hirata","Yui Yoshizawa","Yuriko Tsunokuni","kaori Kaizaki"]
     
@@ -24,21 +24,34 @@ class FriendsViewController: UIViewController,UITableViewDelegate, UITableViewDa
         // デリゲート接続
         tableView.delegate = self
         tableView.dataSource = self
-        
+        // デリゲート接続
         searchBar.delegate = self
+        
+        tableView.tableFooterView = UIView()
     }
     // セルの数
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if searchBar.text != "" {
+            // 検索結果
             return searchResults.count
         } else {
-            
+            // 友達リスト
             return friendsList.count
         }
     }
     // セルに代入するもの
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendsViewCell", for: indexPath)
+        // アイコン画像のレイアウト
+        let imgIcon = cell.viewWithTag(1) as! UIImageView
+        imgIcon.layer.masksToBounds = false
+        imgIcon.layer.shadowColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        imgIcon.layer.shadowOffset = CGSize(width: 6, height: 2)
+        imgIcon.layer.shadowRadius = 2
+        imgIcon.layer.shadowOpacity = 0.8
+        // セルをタップした際の色
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
+    
         let friendName = cell.viewWithTag(2) as! UILabel
         if searchBar.text != "" {
             friendName.text = searchResults[indexPath.row]
@@ -46,6 +59,7 @@ class FriendsViewController: UIViewController,UITableViewDelegate, UITableViewDa
             
             friendName.text = friendsList[indexPath.row]
         }
+        
         return cell
     }
     // セルの高さ
@@ -53,7 +67,7 @@ class FriendsViewController: UIViewController,UITableViewDelegate, UITableViewDa
         return 75
         
     }
-    
+    // セルタップ時
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let storyboard: UIStoryboard = UIStoryboard(name: "Location", bundle: nil)
@@ -95,10 +109,16 @@ class FriendsViewController: UIViewController,UITableViewDelegate, UITableViewDa
             navigationController?.setNavigationBarHidden(false, animated: true)
         }
     }
-//    // 地図マップへ移動
-//    @IBAction func locationButton(_ sender: UIButton) {
-//
-//
-//    }
+    // トークルームへ
+    @IBAction func talkButton(_ sender: Any) {
+        
+        // storyboardのfileの特定
+        let storyboard: UIStoryboard = UIStoryboard(name: "TalkRoom", bundle: nil)
+        // 移動先のvcをインスタンス化
+        let vc = storyboard.instantiateViewController(withIdentifier: "TalkRoom")
+        // 遷移処理
+        self.present(vc, animated: true)
+        
+    }
 }
 

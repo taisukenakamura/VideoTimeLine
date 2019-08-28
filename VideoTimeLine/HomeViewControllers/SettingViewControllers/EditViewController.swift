@@ -11,7 +11,7 @@ import FirebaseAuth
 
 class EditViewController: UIViewController,UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     // プロフィール画像
-    @IBOutlet weak var profileImageView: CircleImageView!
+    @IBOutlet weak var profileImageView: UIImageView!
     // 名前
     @IBOutlet weak var userNameTextField: UITextField!
     // フレーズ
